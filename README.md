@@ -103,11 +103,13 @@ Peak RSS includes framework resources. GPU memory reports sum per-device tensor 
 
 ## Presentation and demo
 
-The 12-slide presentation follows the supplied reference style:
+The 13-slide presentation follows the supplied reference style. Presenter names appear only on the cover. The speaking sections are:
 
-- **Prithiv**, slides 2–4: CNN, sequential versus parallel work, CPU/OpenMP execution.
-- **Satya**, slides 5–8: GPGPU, CUDA execution, kernels and program design, DataParallel.
-- **Roydon**, slides 9–12: measured results, scaling and cost, accuracy, conclusions and demo.
+- **Prithvi**, slides 2–4: CNN, sequential versus parallel work, CPU/OpenMP execution.
+- **Satya**, slides 5–9: GPGPU, dedicated GPU memory and batching, CUDA execution, library kernels and program design, DataParallel.
+- **Roydon**, slides 10–13: measured results, scaling and cost, accuracy, conclusions and demo.
+
+The slides explain output ownership, loop-end barriers, stream dependencies, gradient reductions and one synchronized DataParallel update. The additional dGPU slide uses the measured batch-1 and batch-64 inference results; no wider batch sweep is claimed.
 
 The demo loads all five final checkpoints and predicts the same held-out digits. Cold loading is separate from warmed inference latency. In the completed Kaggle runtime:
 
