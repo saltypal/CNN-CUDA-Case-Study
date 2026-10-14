@@ -4,7 +4,7 @@
 
 A small MNIST classifier with handwritten CPU/CUDA convolution, direct cuDNN calls and PyTorch baselines. The code is modular, the notebook fetches it from GitHub, and the results come from a completed Kaggle run.
 
-[Expanded teaching deck](presentation/CNN_CUDA_Case_Study_Parallel_Computing.pptx) · [Presenter notes](presentation/CNN_CUDA_Presenter_Notes.md) · [Experiment notebook](notebooks/experiment.ipynb) Â· [Kaggle run](https://www.kaggle.com/code/satyapaladugu/cnn-cuda-case-study) Â· [Full report](reports/kaggle-2026-10-14/REPORT.md) Â· [Raw metrics](reports/kaggle-2026-10-14/all_results.json) Â· [Release artifacts](https://github.com/saltypal/CNN-CUDA-Case-Study/releases/tag/v1.0.0)
+[Presentation](presentation/CNN_CUDA_Case_Study.pptx) · [Experiment notebook](notebooks/experiment.ipynb) · [Kaggle run](https://www.kaggle.com/code/satyapaladugu/cnn-cuda-case-study) · [Full report](reports/kaggle-2026-10-14/REPORT.md) · [Raw metrics](reports/kaggle-2026-10-14/all_results.json) · [Release artifacts](https://github.com/saltypal/CNN-CUDA-Case-Study/releases/tag/v1.0.0)
 
 ## What the experiment found
 
@@ -59,7 +59,7 @@ All training paths use FP32, seed 42, batch size 64, SGD learning rate 0.05, mom
 
 ![Training loss and validation accuracy](reports/kaggle-2026-10-14/learning_curves.png)
 
-Training loss falls close to zero while validation accuracy stays around 94â€“95%. The 50-epoch requirement completes, but the curves show overfitting on this small subset. These results are useful for a computing case study, not evidence of optimal classifier training.
+Training loss falls close to zero while validation accuracy stays around 94–95%. The 50-epoch requirement completes, but the curves show overfitting on this small subset. These results are useful for a computing case study, not evidence of optimal classifier training.
 
 ## What is handwritten
 
@@ -151,13 +151,13 @@ cd /kaggle/working/cnn-cuda-case-study-source
 PYTHONPATH=src python -m hpc_cnn.demo --run-root /kaggle/working/cnn-cuda-case-study-results
 ```
 
-Checkpoint loading and cold initialization are separate from warmed benchmark latency. Use the measured tables when discussing performance. The expanded 24-slide dark-mode PowerPoint teaches parallel computing inside convolution and ends with this demo. Each of the three presenters has eight slides.
+Checkpoint loading and cold initialization are separate from warmed benchmark latency. Use the measured tables when discussing performance. The final 11-slide presentation uses the Project Kickoff template and follows the three-presenter sequence:
 
-- Slides 1–8: convolution, independent outputs, CPU indexing and locality, OpenMP scheduling, ownership and scaling.
-- Slides 9–16: CUDA threads, blocks, warps, coalescing, host/device execution, shared tiles, barriers and backward reductions.
-- Slides 17–24: cuDNN matrix formulation, DataParallel, training dependencies, overhead, measured algorithms and the live demo.
+- Person 1, slides 1–3: CNN basics, sequential versus parallel work, CPU execution with OpenMP and its advantages/disadvantages.
+- Person 2, slides 4–7: GPGPU, CUDA execution, kernels and shared program design, two-GPU DataParallel.
+- Person 3, slides 8–11: training results, convolution and inference results, efficiency/overhead/cost, conclusion and live demo.
 
-The [presenter notes](presentation/CNN_CUDA_Presenter_Notes.md) explain every worked example and link the official references and measured source. The original compact presentation remains in the first release.
+The explanations use illustrations and short text. All seven measured configurations remain in the result tables, and the speaker notes contain the demo command and timing definitions. Earlier deck versions remain in their respective releases.
 
 ## Limits
 
