@@ -1,0 +1,7 @@
+cuda_dataparallel epoch 01/50: train loss 0.8641, val accuracy 88.25%, train 0.381s
+cuda_dataparallel epoch 10/50: train loss 0.0625, val accuracy 94.42%, train 0.310s
+cuda_dataparallel epoch 20/50: train loss 0.0105, val accuracy 94.33%, train 0.316s
+cuda_dataparallel epoch 30/50: train loss 0.0031, val accuracy 94.58%, train 0.310s
+cuda_dataparallel epoch 40/50: train loss 0.0018, val accuracy 94.58%, train 0.306s
+cuda_dataparallel epoch 50/50: train loss 0.0013, val accuracy 94.50%, train 0.324s
+COMPLETE cuda_dataparallel: 15.99s training, test 95.60%

@@ -1,0 +1,7 @@
+cudnn_dataparallel epoch 01/50: train loss 0.8641, val accuracy 88.25%, train 0.385s
+cudnn_dataparallel epoch 10/50: train loss 0.0626, val accuracy 94.42%, train 0.329s
+cudnn_dataparallel epoch 20/50: train loss 0.0105, val accuracy 94.33%, train 0.344s
+cudnn_dataparallel epoch 30/50: train loss 0.0031, val accuracy 94.58%, train 0.361s
+cudnn_dataparallel epoch 40/50: train loss 0.0018, val accuracy 94.58%, train 0.335s
+cudnn_dataparallel epoch 50/50: train loss 0.0013, val accuracy 94.33%, train 0.350s
+COMPLETE cudnn_dataparallel: 17.32s training, test 95.60%

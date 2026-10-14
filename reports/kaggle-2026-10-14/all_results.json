@@ -1,0 +1,5078 @@
+{
+  "training": [
+    {
+      "backend": "pytorch_cpu",
+      "epochs_completed": 50,
+      "training_s": 10.1703425270004,
+      "gpu_count": 0,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 0.0,
+      "peak_gpu_tensor_allocated_bytes_per_device": [],
+      "training_and_validation_wall_s": 11.45019371899997,
+      "validation_s": 1.1954700670000307,
+      "mean_epoch_training_s": 0.203406850540008,
+      "training_images_per_s": 23598.025274256386,
+      "test_loss": 0.24464482116699218,
+      "test_accuracy": 0.9559999704360962,
+      "final_validation_accuracy": 0.9433333277702332,
+      "best_validation_accuracy": 0.949999988079071,
+      "setup_s": 1.4652364180000177,
+      "initial_data_and_model_transfer_s": 0.00022126199996819196,
+      "warmup_s": 0.14777463199999374,
+      "test_evaluation_s": 0.020216394000044602,
+      "peak_process_rss_bytes": 726179840,
+      "peak_gpu_tensor_allocated_bytes": null,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    },
+    {
+      "backend": "cuda",
+      "epochs_completed": 50,
+      "training_s": 6.062473477000083,
+      "gpu_count": 1,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 6.062473477000083,
+      "peak_gpu_tensor_allocated_bytes_per_device": [
+        92605952
+      ],
+      "training_and_validation_wall_s": 6.759370388999969,
+      "validation_s": 0.5994729019998886,
+      "mean_epoch_training_s": 0.12124946954000165,
+      "training_images_per_s": 39587.802059756,
+      "test_loss": 0.24466004943847655,
+      "test_accuracy": 0.956000030040741,
+      "final_validation_accuracy": 0.9433333277702332,
+      "best_validation_accuracy": 0.9500000476837158,
+      "setup_s": 0.7634740249999936,
+      "initial_data_and_model_transfer_s": 0.38830712199995787,
+      "warmup_s": 0.34264218499998833,
+      "test_evaluation_s": 0.007939872999997988,
+      "peak_process_rss_bytes": 1162452992,
+      "peak_gpu_tensor_allocated_bytes": 92605952,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    },
+    {
+      "backend": "cuda_dataparallel",
+      "epochs_completed": 50,
+      "training_s": 15.988263135000238,
+      "gpu_count": 2,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 31.976526270000477,
+      "peak_gpu_tensor_allocated_bytes_per_device": [
+        92616192,
+        70400000
+      ],
+      "training_and_validation_wall_s": 18.235424248000015,
+      "validation_s": 2.1715366590001395,
+      "mean_epoch_training_s": 0.31976526270000477,
+      "training_images_per_s": 15011.011388385961,
+      "test_loss": 0.24456875610351564,
+      "test_accuracy": 0.956000030040741,
+      "final_validation_accuracy": 0.9450000524520874,
+      "best_validation_accuracy": 0.9508333802223206,
+      "setup_s": 0.7550023859999442,
+      "initial_data_and_model_transfer_s": 0.3868231810000111,
+      "warmup_s": 0.7472461229999681,
+      "test_evaluation_s": 0.035745394999992186,
+      "peak_process_rss_bytes": 1548447744,
+      "peak_gpu_tensor_allocated_bytes": 163016192,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    },
+    {
+      "backend": "cudnn",
+      "epochs_completed": 50,
+      "training_s": 6.338484567999842,
+      "gpu_count": 1,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 6.338484567999842,
+      "peak_gpu_tensor_allocated_bytes_per_device": [
+        92605952
+      ],
+      "training_and_validation_wall_s": 6.990411695000034,
+      "validation_s": 0.5707530009999573,
+      "mean_epoch_training_s": 0.12676969135999683,
+      "training_images_per_s": 37863.94009881353,
+      "test_loss": 0.24444190979003907,
+      "test_accuracy": 0.956000030040741,
+      "final_validation_accuracy": 0.9433333277702332,
+      "best_validation_accuracy": 0.9508333802223206,
+      "setup_s": 0.7648427940000033,
+      "initial_data_and_model_transfer_s": 0.39522617400001536,
+      "warmup_s": 0.24150570699998752,
+      "test_evaluation_s": 0.009089797999990878,
+      "peak_process_rss_bytes": 1269428224,
+      "peak_gpu_tensor_allocated_bytes": 92605952,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    },
+    {
+      "backend": "cudnn_dataparallel",
+      "epochs_completed": 50,
+      "training_s": 17.322782617999792,
+      "gpu_count": 2,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 34.645565235999584,
+      "peak_gpu_tensor_allocated_bytes_per_device": [
+        92616192,
+        70400000
+      ],
+      "training_and_validation_wall_s": 19.709718930999998,
+      "validation_s": 2.3101723669997227,
+      "mean_epoch_training_s": 0.3464556523599958,
+      "training_images_per_s": 13854.58706562653,
+      "test_loss": 0.2443260955810547,
+      "test_accuracy": 0.956000030040741,
+      "final_validation_accuracy": 0.9433333277702332,
+      "best_validation_accuracy": 0.9483333826065063,
+      "setup_s": 0.7727749900000163,
+      "initial_data_and_model_transfer_s": 0.40441504199998235,
+      "warmup_s": 0.7555070839999871,
+      "test_evaluation_s": 0.036908386999925824,
+      "peak_process_rss_bytes": 1660219392,
+      "peak_gpu_tensor_allocated_bytes": 163016192,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    },
+    {
+      "backend": "pytorch_cuda",
+      "epochs_completed": 50,
+      "training_s": 5.422289183000316,
+      "gpu_count": 1,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 5.422289183000316,
+      "peak_gpu_tensor_allocated_bytes_per_device": [
+        92605952
+      ],
+      "training_and_validation_wall_s": 5.946636928000089,
+      "validation_s": 0.4359772900002099,
+      "mean_epoch_training_s": 0.10844578366000633,
+      "training_images_per_s": 44261.74847930201,
+      "test_loss": 0.2445241241455078,
+      "test_accuracy": 0.956000030040741,
+      "final_validation_accuracy": 0.9441666603088379,
+      "best_validation_accuracy": 0.9508333802223206,
+      "setup_s": 0.776985652999997,
+      "initial_data_and_model_transfer_s": 0.39199095200001466,
+      "warmup_s": 0.311481315999913,
+      "test_evaluation_s": 0.00792168300006324,
+      "peak_process_rss_bytes": 1275338752,
+      "peak_gpu_tensor_allocated_bytes": 92605952,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    },
+    {
+      "backend": "pytorch_dataparallel",
+      "epochs_completed": 50,
+      "training_s": 18.386988903000088,
+      "gpu_count": 2,
+      "global_batch_size": 64,
+      "gpu_training_allocation_seconds": 36.773977806000175,
+      "peak_gpu_tensor_allocated_bytes_per_device": [
+        92616192,
+        70400000
+      ],
+      "training_and_validation_wall_s": 21.38381713000001,
+      "validation_s": 2.919014772999617,
+      "mean_epoch_training_s": 0.36773977806000174,
+      "training_images_per_s": 13052.708154995446,
+      "test_loss": 0.24455287170410156,
+      "test_accuracy": 0.956000030040741,
+      "final_validation_accuracy": 0.9450000524520874,
+      "best_validation_accuracy": 0.9508333802223206,
+      "setup_s": 0.7538482279999243,
+      "initial_data_and_model_transfer_s": 0.3845039550000138,
+      "warmup_s": 0.8380519930000219,
+      "test_evaluation_s": 0.04749003899996751,
+      "peak_process_rss_bytes": 1795727360,
+      "peak_gpu_tensor_allocated_bytes": 163016192,
+      "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+      "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+      "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+      "monetary_training_cost": null,
+      "energy_joules": null
+    }
+  ],
+  "benchmark": {
+    "environment": {
+      "utc_time": "2026-10-14T09:20:12.469871+00:00",
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "torch": "2.11.0+cu128",
+      "cuda_runtime": "12.8",
+      "cudnn_version": 91900,
+      "source_sha256": "8abc77c10910c0ff5f84fb7097a3304d2c651965b25ccdb6b238d4a4b1112056",
+      "git_commit": "370e8a418f76c32129057a95eb7993f19095cd3f",
+      "cpu_logical_count": 4,
+      "torch_cpu_threads": 4,
+      "source_dirty": false,
+      "cpu_name": "Intel(R) Xeon(R) CPU @ 2.00GHz",
+      "gpu": {
+        "name": "Tesla T4",
+        "compute_capability": [
+          7,
+          5
+        ],
+        "multiprocessors": 40,
+        "total_memory_bytes": 15636037632
+      },
+      "gpus": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "compute_capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 15636037632
+        },
+        {
+          "index": 1,
+          "name": "Tesla T4",
+          "compute_capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 15636037632
+        }
+      ],
+      "cuda_compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0",
+      "cpu_compiler": null
+    },
+    "config": {
+      "seed": 42,
+      "epochs": 50,
+      "batch_size": 64,
+      "learning_rate": 0.05,
+      "momentum": 0.9,
+      "conv_channels": 4,
+      "cpu_threads": 4,
+      "train_count": 4800,
+      "validation_count": 1200,
+      "test_count": 1000,
+      "backends": [
+        "cpu",
+        "cpu_openmp",
+        "cuda",
+        "cuda_shared",
+        "cudnn",
+        "pytorch_cpu",
+        "pytorch_cuda",
+        "cuda_dataparallel",
+        "cudnn_dataparallel",
+        "pytorch_dataparallel"
+      ],
+      "benchmark_repeats": 100,
+      "benchmark_warmup": 20,
+      "gpu_hour_price": null,
+      "cpu_hour_price": null,
+      "training_backends": [
+        "pytorch_cpu",
+        "cuda",
+        "cuda_dataparallel",
+        "cudnn",
+        "cudnn_dataparallel",
+        "pytorch_cuda",
+        "pytorch_dataparallel"
+      ]
+    },
+    "convolutions": [
+      {
+        "backend": "cpu",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.124063,
+          "wall_p10_ms": 0.122324,
+          "wall_p90_ms": 0.133301,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 0.3923168067836502,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 1.0
+      },
+      {
+        "backend": "cpu",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 6.608541499999999,
+          "wall_p10_ms": 6.487189,
+          "wall_p90_ms": 7.011575,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 0.4713608895396965,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 1.0
+      },
+      {
+        "backend": "cpu",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 59.1544405,
+          "wall_p10_ms": 58.146992,
+          "wall_p90_ms": 59.773763,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 1.1977563713074084,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 1.0
+      },
+      {
+        "backend": "cpu_openmp",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.06632199999999999,
+          "wall_p10_ms": 0.062019,
+          "wall_p90_ms": 0.075053,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 0.7338741292482134,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 1.8706160851602789,
+        "parallel_efficiency": 0.4676540212900697,
+        "parallel_processor_time_overhead_ms": 0.14122499999999996,
+        "processor_time_cost_ratio": 2.138332943746322
+      },
+      {
+        "backend": "cpu_openmp",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 2.2449075,
+          "wall_p10_ms": 2.130695,
+          "wall_p90_ms": 2.394742,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 1.387588575475827,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 2.9437923388825595,
+        "parallel_efficiency": 0.7359480847206399,
+        "parallel_processor_time_overhead_ms": 2.371088500000001,
+        "processor_time_cost_ratio": 1.3587914973371962
+      },
+      {
+        "backend": "cpu_openmp",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 26.230116000000002,
+          "wall_p10_ms": 25.299975,
+          "wall_p90_ms": 27.332138,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 2.7011930866032,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 2.25521078519058,
+        "parallel_efficiency": 0.563802696297645,
+        "parallel_processor_time_overhead_ms": 45.76602350000001,
+        "processor_time_cost_ratio": 1.7736701270972213
+      },
+      {
+        "backend": "cuda",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.062407000000000004,
+          "wall_p10_ms": 0.060983,
+          "wall_p90_ms": 0.079583,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.0719360001385212,
+          "instrumented_wall_median_ms": 0.08999499999999999,
+          "host_enqueue_median_ms": 0.050909499999999996,
+          "host_and_measurement_overhead_median_ms": 0.017543499828815458
+        },
+        "gflops_per_s_wall": 0.779912509814604,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.13296049999999998,
+          "wall_p10_ms": 0.1236,
+          "wall_p90_ms": 0.165781,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.13630399852991104,
+          "instrumented_wall_median_ms": 0.15409899999999999,
+          "host_enqueue_median_ms": 0.11823700000000001,
+          "host_and_measurement_overhead_median_ms": 0.01752200155925751
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.020548999999999998,
+          "wall_p10_ms": 0.020166,
+          "wall_p90_ms": 0.02127,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.023984000086784363,
+          "instrumented_wall_median_ms": 0.0386755,
+          "host_enqueue_median_ms": 0.0125465,
+          "host_and_measurement_overhead_median_ms": 0.015290499959051608
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.0244825,
+          "wall_p10_ms": 0.023458,
+          "wall_p90_ms": 0.030189,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.02731199935078621,
+          "instrumented_wall_median_ms": 0.042502,
+          "host_enqueue_median_ms": 0.0160605,
+          "host_and_measurement_overhead_median_ms": 0.01526650048404932
+        },
+        "speedup_vs_cpu_single_conv": 1.987966093547198
+      },
+      {
+        "backend": "cuda",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 0.0804405,
+          "wall_p10_ms": 0.078699,
+          "wall_p90_ms": 0.093493,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.07516800239682198,
+          "instrumented_wall_median_ms": 0.0931485,
+          "host_enqueue_median_ms": 0.060440999999999995,
+          "host_and_measurement_overhead_median_ms": 0.017422501580953598
+        },
+        "gflops_per_s_wall": 38.72437391612434,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.427087,
+          "wall_p10_ms": 0.40876,
+          "wall_p90_ms": 0.463621,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.43433600664138794,
+          "instrumented_wall_median_ms": 0.4537085,
+          "host_enqueue_median_ms": 0.4057525,
+          "host_and_measurement_overhead_median_ms": 0.01948749861240387
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.077275,
+          "wall_p10_ms": 0.075913,
+          "wall_p90_ms": 0.085862,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.0830719992518425,
+          "instrumented_wall_median_ms": 0.0993975,
+          "host_enqueue_median_ms": 0.0689025,
+          "host_and_measurement_overhead_median_ms": 0.016135499806165694
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.210648,
+          "wall_p10_ms": 0.207158,
+          "wall_p90_ms": 0.231366,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.21881599724292755,
+          "instrumented_wall_median_ms": 0.2370845,
+          "host_enqueue_median_ms": 0.19986,
+          "host_and_measurement_overhead_median_ms": 0.016501005756378168
+        },
+        "speedup_vs_cpu_single_conv": 82.15440605167794
+      },
+      {
+        "backend": "cuda",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 0.3074435,
+          "wall_p10_ms": 0.302539,
+          "wall_p90_ms": 0.319252,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 0.30081599950790405,
+          "instrumented_wall_median_ms": 0.31881499999999996,
+          "host_enqueue_median_ms": 0.057286500000000004,
+          "host_and_measurement_overhead_median_ms": 0.01848101334095001
+        },
+        "gflops_per_s_wall": 230.45732955811394,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 1.1828910000000001,
+          "wall_p10_ms": 1.157422,
+          "wall_p90_ms": 1.212601,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 1.1929439902305603,
+          "instrumented_wall_median_ms": 1.211732,
+          "host_enqueue_median_ms": 1.1566014999999998,
+          "host_and_measurement_overhead_median_ms": 0.019041986179351822
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.3262205,
+          "wall_p10_ms": 0.317855,
+          "wall_p90_ms": 0.336732,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.34094399213790894,
+          "instrumented_wall_median_ms": 0.36139849999999996,
+          "host_enqueue_median_ms": 0.3108965,
+          "host_and_measurement_overhead_median_ms": 0.017342992671966567
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.49402349999999995,
+          "wall_p10_ms": 0.486009,
+          "wall_p90_ms": 0.509162,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.5098719894886017,
+          "instrumented_wall_median_ms": 0.527555,
+          "host_enqueue_median_ms": 0.47542,
+          "host_and_measurement_overhead_median_ms": 0.017392991152763382
+        },
+        "speedup_vs_cpu_single_conv": 192.4075171535583
+      },
+      {
+        "backend": "cuda_shared",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.0635085,
+          "wall_p10_ms": 0.061809,
+          "wall_p90_ms": 0.076775,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.07280000299215317,
+          "instrumented_wall_median_ms": 0.090699,
+          "host_enqueue_median_ms": 0.0511705,
+          "host_and_measurement_overhead_median_ms": 0.017362000789642333
+        },
+        "gflops_per_s_wall": 0.7663856019273012,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.1338345,
+          "wall_p10_ms": 0.127038,
+          "wall_p90_ms": 0.154812,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.14416000247001648,
+          "instrumented_wall_median_ms": 0.1637345,
+          "host_enqueue_median_ms": 0.117476,
+          "host_and_measurement_overhead_median_ms": 0.0177900064702034
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.0208775,
+          "wall_p10_ms": 0.020444,
+          "wall_p90_ms": 0.021837,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.023471999913454056,
+          "instrumented_wall_median_ms": 0.038552,
+          "host_enqueue_median_ms": 0.0126065,
+          "host_and_measurement_overhead_median_ms": 0.015271499780714511
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.024503,
+          "wall_p10_ms": 0.024133,
+          "wall_p90_ms": 0.028859,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.02755199931561947,
+          "instrumented_wall_median_ms": 0.042868,
+          "host_enqueue_median_ms": 0.016117,
+          "host_and_measurement_overhead_median_ms": 0.01534400072705746
+        },
+        "speedup_vs_cpu_single_conv": 1.9534865411716544
+      },
+      {
+        "backend": "cuda_shared",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 0.09382399999999999,
+          "wall_p10_ms": 0.091165,
+          "wall_p90_ms": 0.108599,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.08030400052666664,
+          "instrumented_wall_median_ms": 0.0987025,
+          "host_enqueue_median_ms": 0.0628095,
+          "host_and_measurement_overhead_median_ms": 0.017735499852657315
+        },
+        "gflops_per_s_wall": 33.200545702592095,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.4268725,
+          "wall_p10_ms": 0.412939,
+          "wall_p90_ms": 0.457194,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.4294240027666092,
+          "instrumented_wall_median_ms": 0.44905649999999997,
+          "host_enqueue_median_ms": 0.403755,
+          "host_and_measurement_overhead_median_ms": 0.01896400993156433
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.077288,
+          "wall_p10_ms": 0.076143,
+          "wall_p90_ms": 0.084476,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.08183999732136726,
+          "instrumented_wall_median_ms": 0.0979335,
+          "host_enqueue_median_ms": 0.0685895,
+          "host_and_measurement_overhead_median_ms": 0.015957999979496006
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.212342,
+          "wall_p10_ms": 0.207885,
+          "wall_p90_ms": 0.226912,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.22448000311851501,
+          "instrumented_wall_median_ms": 0.2429555,
+          "host_enqueue_median_ms": 0.200355,
+          "host_and_measurement_overhead_median_ms": 0.016873502149105074
+        },
+        "speedup_vs_cpu_single_conv": 70.4355122356753
+      },
+      {
+        "backend": "cuda_shared",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 0.4515665,
+          "wall_p10_ms": 0.444417,
+          "wall_p90_ms": 0.476065,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 0.44495999813079834,
+          "instrumented_wall_median_ms": 0.46485200000000004,
+          "host_enqueue_median_ms": 0.062834,
+          "host_and_measurement_overhead_median_ms": 0.01949500012588501
+        },
+        "gflops_per_s_wall": 156.90403960435506,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 1.3171005,
+          "wall_p10_ms": 1.295834,
+          "wall_p90_ms": 1.377085,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 1.3316319584846497,
+          "instrumented_wall_median_ms": 1.351831,
+          "host_enqueue_median_ms": 1.288202,
+          "host_and_measurement_overhead_median_ms": 0.01927200633239745
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.3241905,
+          "wall_p10_ms": 0.319753,
+          "wall_p90_ms": 0.348322,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.3394079953432083,
+          "instrumented_wall_median_ms": 0.357205,
+          "host_enqueue_median_ms": 0.3081275,
+          "host_and_measurement_overhead_median_ms": 0.01785450011634826
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.4971045,
+          "wall_p10_ms": 0.487671,
+          "wall_p90_ms": 0.504379,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.5104160010814667,
+          "instrumented_wall_median_ms": 0.528428,
+          "host_enqueue_median_ms": 0.4780715,
+          "host_and_measurement_overhead_median_ms": 0.017564996656417864
+        },
+        "speedup_vs_cpu_single_conv": 130.99829261028
+      },
+      {
+        "backend": "cudnn",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.1418035,
+          "wall_p10_ms": 0.135438,
+          "wall_p90_ms": 0.163707,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.13923199474811554,
+          "instrumented_wall_median_ms": 0.158189,
+          "host_enqueue_median_ms": 0.12287999999999999,
+          "host_and_measurement_overhead_median_ms": 0.018323496194839486
+        },
+        "gflops_per_s_wall": 0.34323553367864684,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.224229,
+          "wall_p10_ms": 0.212991,
+          "wall_p90_ms": 0.241649,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.2237600013613701,
+          "instrumented_wall_median_ms": 0.2432165,
+          "host_enqueue_median_ms": 0.201065,
+          "host_and_measurement_overhead_median_ms": 0.018462996726989728
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.021171,
+          "wall_p10_ms": 0.020768,
+          "wall_p90_ms": 0.02184,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.024111999198794365,
+          "instrumented_wall_median_ms": 0.038947499999999996,
+          "host_enqueue_median_ms": 0.012697,
+          "host_and_measurement_overhead_median_ms": 0.015290000016212463
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.025459000000000002,
+          "wall_p10_ms": 0.024885,
+          "wall_p90_ms": 0.02739,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.028095999732613564,
+          "instrumented_wall_median_ms": 0.0434675,
+          "host_enqueue_median_ms": 0.016613,
+          "host_and_measurement_overhead_median_ms": 0.015359500467717647
+        },
+        "speedup_vs_cpu_single_conv": 0.8748937790675125
+      },
+      {
+        "backend": "cudnn",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 0.16203499999999998,
+          "wall_p10_ms": 0.142938,
+          "wall_p90_ms": 0.193647,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.14163199812173843,
+          "instrumented_wall_median_ms": 0.1610795,
+          "host_enqueue_median_ms": 0.14106950000000001,
+          "host_and_measurement_overhead_median_ms": 0.01834999877595901
+        },
+        "gflops_per_s_wall": 19.224291048230324,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.5028935,
+          "wall_p10_ms": 0.485036,
+          "wall_p90_ms": 0.534454,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.5018880069255829,
+          "instrumented_wall_median_ms": 0.5211595,
+          "host_enqueue_median_ms": 0.4757195,
+          "host_and_measurement_overhead_median_ms": 0.019388501818656922
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.0775305,
+          "wall_p10_ms": 0.07621,
+          "wall_p90_ms": 0.082905,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.07913599908351898,
+          "instrumented_wall_median_ms": 0.094694,
+          "host_enqueue_median_ms": 0.068598,
+          "host_and_measurement_overhead_median_ms": 0.015600498634338385
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.213534,
+          "wall_p10_ms": 0.208709,
+          "wall_p90_ms": 0.23137,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.22470399737358093,
+          "instrumented_wall_median_ms": 0.24249199999999999,
+          "host_enqueue_median_ms": 0.2013675,
+          "host_and_measurement_overhead_median_ms": 0.016975003789424903
+        },
+        "speedup_vs_cpu_single_conv": 40.784654549942914
+      },
+      {
+        "backend": "cudnn",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 0.2806355,
+          "wall_p10_ms": 0.258273,
+          "wall_p90_ms": 0.304295,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 0.24828799813985825,
+          "instrumented_wall_median_ms": 0.267853,
+          "host_enqueue_median_ms": 0.15548099999999998,
+          "host_and_measurement_overhead_median_ms": 0.01937899342107771
+        },
+        "gflops_per_s_wall": 252.47200728346914,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 1.132018,
+          "wall_p10_ms": 1.108104,
+          "wall_p90_ms": 1.161179,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 1.139680027961731,
+          "instrumented_wall_median_ms": 1.1590224999999998,
+          "host_enqueue_median_ms": 1.104185,
+          "host_and_measurement_overhead_median_ms": 0.01942248976516725
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.3311095,
+          "wall_p10_ms": 0.32134,
+          "wall_p90_ms": 0.347826,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.33640000224113464,
+          "instrumented_wall_median_ms": 0.354129,
+          "host_enqueue_median_ms": 0.31183550000000004,
+          "host_and_measurement_overhead_median_ms": 0.017564999300003048
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.498946,
+          "wall_p10_ms": 0.486937,
+          "wall_p90_ms": 0.554251,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.513375997543335,
+          "instrumented_wall_median_ms": 0.5310794999999999,
+          "host_enqueue_median_ms": 0.4786895,
+          "host_and_measurement_overhead_median_ms": 0.017564007789611813
+        },
+        "speedup_vs_cpu_single_conv": 210.7874467057803
+      },
+      {
+        "backend": "pytorch_cpu",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.023802499999999997,
+          "wall_p10_ms": 0.023393,
+          "wall_p90_ms": 0.027061,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 2.0448272240310894,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 5.212183594160278
+      },
+      {
+        "backend": "pytorch_cpu",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 0.35282749999999996,
+          "wall_p10_ms": 0.327419,
+          "wall_p90_ms": 0.39874,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 8.828699576988756,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 18.730233612742772
+      },
+      {
+        "backend": "pytorch_cpu",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 0,
+        "effective_gpu_count": 0,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 0.699233,
+          "wall_p10_ms": 0.67984,
+          "wall_p90_ms": 0.785506,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": null
+        },
+        "gflops_per_s_wall": 101.32903910427568,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "speedup_vs_cpu_single_conv": 84.59903994805737
+      },
+      {
+        "backend": "pytorch_cuda",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.041676500000000005,
+          "wall_p10_ms": 0.040611,
+          "wall_p90_ms": 0.051994,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.05310400016605854,
+          "instrumented_wall_median_ms": 0.070271,
+          "host_enqueue_median_ms": 0.029492499999999998,
+          "host_and_measurement_overhead_median_ms": 0.016922498667120936
+        },
+        "gflops_per_s_wall": 1.1678523868367063,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "observed_dispatch_operators": [
+          "aten::_convolution",
+          "aten::add_",
+          "aten::conv2d",
+          "aten::convolution",
+          "aten::cudnn_convolution",
+          "aten::reshape",
+          "aten::view",
+          "cudaDeviceSynchronize",
+          "cudaGetErrorString",
+          "cudaLaunchKernel"
+        ],
+        "cudnn_dispatch_observed": true,
+        "host_to_host": {
+          "wall_median_ms": 0.1198675,
+          "wall_p10_ms": 0.112934,
+          "wall_p90_ms": 0.139197,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.13502400368452072,
+          "instrumented_wall_median_ms": 0.15641850000000002,
+          "host_enqueue_median_ms": 0.0985975,
+          "host_and_measurement_overhead_median_ms": 0.02069400078678131
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.027095,
+          "wall_p10_ms": 0.026688,
+          "wall_p90_ms": 0.028571,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.029632000252604485,
+          "instrumented_wall_median_ms": 0.047189,
+          "host_enqueue_median_ms": 0.015742,
+          "host_and_measurement_overhead_median_ms": 0.017612000491559504
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.030314,
+          "wall_p10_ms": 0.030017,
+          "wall_p90_ms": 0.032403,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.03367999941110611,
+          "instrumented_wall_median_ms": 0.0515245,
+          "host_enqueue_median_ms": 0.0189245,
+          "host_and_measurement_overhead_median_ms": 0.017827000101566317
+        },
+        "speedup_vs_cpu_single_conv": 2.9768094729643804
+      },
+      {
+        "backend": "pytorch_cuda",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 0.072578,
+          "wall_p10_ms": 0.067584,
+          "wall_p90_ms": 0.079398,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.06843199953436852,
+          "instrumented_wall_median_ms": 0.088926,
+          "host_enqueue_median_ms": 0.042427999999999993,
+          "host_and_measurement_overhead_median_ms": 0.019402999954462055
+        },
+        "gflops_per_s_wall": 42.9194521755904,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.4062255,
+          "wall_p10_ms": 0.395356,
+          "wall_p90_ms": 0.441644,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.4208800047636032,
+          "instrumented_wall_median_ms": 0.444282,
+          "host_enqueue_median_ms": 0.3764805,
+          "host_and_measurement_overhead_median_ms": 0.022091001667022686
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.08386199999999999,
+          "wall_p10_ms": 0.081965,
+          "wall_p90_ms": 0.09281,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.08833600208163261,
+          "instrumented_wall_median_ms": 0.107614,
+          "host_enqueue_median_ms": 0.071331,
+          "host_and_measurement_overhead_median_ms": 0.018964000622510906
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.2221175,
+          "wall_p10_ms": 0.217355,
+          "wall_p90_ms": 0.237778,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.23366400599479675,
+          "instrumented_wall_median_ms": 0.254737,
+          "host_enqueue_median_ms": 0.205918,
+          "host_and_measurement_overhead_median_ms": 0.02028549993228912
+        },
+        "speedup_vs_cpu_single_conv": 91.05433464686267
+      },
+      {
+        "backend": "pytorch_cuda",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 1,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 0.158855,
+          "wall_p10_ms": 0.153123,
+          "wall_p90_ms": 0.169527,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 0.1565599963068962,
+          "instrumented_wall_median_ms": 0.179813,
+          "host_enqueue_median_ms": 0.0560495,
+          "host_and_measurement_overhead_median_ms": 0.023040995473861695
+        },
+        "gflops_per_s_wall": 446.0206351704384,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 1.059388,
+          "wall_p10_ms": 1.003016,
+          "wall_p90_ms": 1.092108,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 1.0799359679222107,
+          "instrumented_wall_median_ms": 1.1062859999999999,
+          "host_enqueue_median_ms": 1.0229590000000002,
+          "host_and_measurement_overhead_median_ms": 0.02482647412490846
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.3532815,
+          "wall_p10_ms": 0.339507,
+          "wall_p90_ms": 0.380915,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.3564800024032593,
+          "instrumented_wall_median_ms": 0.37943400000000005,
+          "host_enqueue_median_ms": 0.32622850000000003,
+          "host_and_measurement_overhead_median_ms": 0.022160997137069705
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.5438045,
+          "wall_p10_ms": 0.522181,
+          "wall_p90_ms": 0.581407,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.5428160130977631,
+          "instrumented_wall_median_ms": 0.5720385,
+          "host_enqueue_median_ms": 0.510662,
+          "host_and_measurement_overhead_median_ms": 0.023245497869491594
+        },
+        "speedup_vs_cpu_single_conv": 372.3800982027635
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.5484005,
+          "wall_p10_ms": 0.526788,
+          "wall_p90_ms": 0.608609,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.5445599853992462,
+          "instrumented_wall_median_ms": 0.5699315,
+          "host_enqueue_median_ms": 0.5174325,
+          "host_and_measurement_overhead_median_ms": 0.02546399742126465
+        },
+        "gflops_per_s_wall": 0.08875265431012554,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.607687,
+          "wall_p10_ms": 0.582468,
+          "wall_p90_ms": 0.663721,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.602863997220993,
+          "instrumented_wall_median_ms": 0.6266985,
+          "host_enqueue_median_ms": 0.5805629999999999,
+          "host_and_measurement_overhead_median_ms": 0.02275201803779603
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.0271215,
+          "wall_p10_ms": 0.026801,
+          "wall_p90_ms": 0.029474,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.029680000618100166,
+          "instrumented_wall_median_ms": 0.047425999999999996,
+          "host_enqueue_median_ms": 0.0157485,
+          "host_and_measurement_overhead_median_ms": 0.0177384996688962
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.030473,
+          "wall_p10_ms": 0.030243,
+          "wall_p90_ms": 0.032128,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.03377600014209747,
+          "instrumented_wall_median_ms": 0.051608,
+          "host_enqueue_median_ms": 0.018987,
+          "host_and_measurement_overhead_median_ms": 0.017776999700903896
+        },
+        "speedup_vs_cpu_single_conv": 0.22622700015773148,
+        "gpu_speedup_vs_matching_single": 0.11379821863765625,
+        "gpu_parallel_efficiency": null,
+        "gpu_processor_time_overhead_ms": null
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 2,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 1.6378545,
+          "wall_p10_ms": 1.556567,
+          "wall_p90_ms": 1.756211,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 1.668783962726593,
+          "instrumented_wall_median_ms": 1.699332,
+          "host_enqueue_median_ms": 1.6053695000000001,
+          "host_and_measurement_overhead_median_ms": 0.025286511009216306
+        },
+        "gflops_per_s_wall": 1.9018832258909446,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 2.0085230000000003,
+          "wall_p10_ms": 1.92102,
+          "wall_p90_ms": 2.12292,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 1.990559995174408,
+          "instrumented_wall_median_ms": 2.0167384999999998,
+          "host_enqueue_median_ms": 1.9678475,
+          "host_and_measurement_overhead_median_ms": 0.02474654221344008
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.0887615,
+          "wall_p10_ms": 0.086625,
+          "wall_p90_ms": 0.115139,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.09305600076913834,
+          "instrumented_wall_median_ms": 0.1130915,
+          "host_enqueue_median_ms": 0.074458,
+          "host_and_measurement_overhead_median_ms": 0.018894998596429825
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.227041,
+          "wall_p10_ms": 0.221288,
+          "wall_p90_ms": 0.247883,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.2351519986987114,
+          "instrumented_wall_median_ms": 0.256429,
+          "host_enqueue_median_ms": 0.20752500000000002,
+          "host_and_measurement_overhead_median_ms": 0.020059995192050928
+        },
+        "speedup_vs_cpu_single_conv": 4.034877029675102,
+        "gpu_speedup_vs_matching_single": 0.04911333699055685,
+        "gpu_parallel_efficiency": 0.024556668495278426,
+        "gpu_processor_time_overhead_ms": 3.1952685
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 2,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 1.653591,
+          "wall_p10_ms": 1.564673,
+          "wall_p90_ms": 1.783404,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 1.6085759997367859,
+          "instrumented_wall_median_ms": 1.6389555,
+          "host_enqueue_median_ms": 1.607216,
+          "host_and_measurement_overhead_median_ms": 0.025037995765685994
+        },
+        "gflops_per_s_wall": 42.84772232069478,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 2.586476,
+          "wall_p10_ms": 2.534431,
+          "wall_p90_ms": 2.745564,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 2.5959519147872925,
+          "instrumented_wall_median_ms": 2.622504,
+          "host_enqueue_median_ms": 2.5330845,
+          "host_and_measurement_overhead_median_ms": 0.0265995163650512
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.3592155,
+          "wall_p10_ms": 0.340432,
+          "wall_p90_ms": 0.399582,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.3495839983224869,
+          "instrumented_wall_median_ms": 0.37052300000000005,
+          "host_enqueue_median_ms": 0.3247775,
+          "host_and_measurement_overhead_median_ms": 0.020400499858856225
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.5243545000000001,
+          "wall_p10_ms": 0.508664,
+          "wall_p90_ms": 0.542994,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.5287519991397858,
+          "instrumented_wall_median_ms": 0.550786,
+          "host_enqueue_median_ms": 0.4934995,
+          "host_and_measurement_overhead_median_ms": 0.020778994810104368
+        },
+        "speedup_vs_cpu_single_conv": 35.77332030713762,
+        "gpu_speedup_vs_matching_single": 0.18592475406554582,
+        "gpu_parallel_efficiency": 0.09296237703277291,
+        "gpu_processor_time_overhead_ms": 2.9997385000000003
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.6339535000000001,
+          "wall_p10_ms": 0.612432,
+          "wall_p90_ms": 0.699485,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.6300159990787506,
+          "instrumented_wall_median_ms": 0.6563414999999999,
+          "host_enqueue_median_ms": 0.5982955000000001,
+          "host_and_measurement_overhead_median_ms": 0.025164998306274444
+        },
+        "gflops_per_s_wall": 0.07677534708775957,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.7145174999999999,
+          "wall_p10_ms": 0.694523,
+          "wall_p90_ms": 0.814695,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.7137759923934937,
+          "instrumented_wall_median_ms": 0.738571,
+          "host_enqueue_median_ms": 0.6839820000000001,
+          "host_and_measurement_overhead_median_ms": 0.02302598734092709
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.029763,
+          "wall_p10_ms": 0.029011,
+          "wall_p90_ms": 0.040109,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.03062400035560131,
+          "instrumented_wall_median_ms": 0.0486075,
+          "host_enqueue_median_ms": 0.016294000000000003,
+          "host_and_measurement_overhead_median_ms": 0.01808450034022331
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.034242999999999996,
+          "wall_p10_ms": 0.03301,
+          "wall_p90_ms": 0.038271,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.03518399968743324,
+          "instrumented_wall_median_ms": 0.053502,
+          "host_enqueue_median_ms": 0.020352000000000002,
+          "host_and_measurement_overhead_median_ms": 0.018166001130223274
+        },
+        "speedup_vs_cpu_single_conv": 0.19569731849417976,
+        "gpu_speedup_vs_matching_single": 0.22368123214084312,
+        "gpu_parallel_efficiency": null,
+        "gpu_processor_time_overhead_ms": null
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 2,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 1.8248445,
+          "wall_p10_ms": 1.738221,
+          "wall_p90_ms": 1.971172,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 1.8535679578781128,
+          "instrumented_wall_median_ms": 1.879138,
+          "host_enqueue_median_ms": 1.7867435,
+          "host_and_measurement_overhead_median_ms": 0.02568751483917242
+        },
+        "gflops_per_s_wall": 1.7069991443106522,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 2.171063,
+          "wall_p10_ms": 2.087888,
+          "wall_p90_ms": 2.336678,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 2.118656039237976,
+          "instrumented_wall_median_ms": 2.143458,
+          "host_enqueue_median_ms": 2.1316585,
+          "host_and_measurement_overhead_median_ms": 0.024820998634338398
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.0889215,
+          "wall_p10_ms": 0.08664,
+          "wall_p90_ms": 0.111217,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.09540800005197525,
+          "instrumented_wall_median_ms": 0.1168885,
+          "host_enqueue_median_ms": 0.0742145,
+          "host_and_measurement_overhead_median_ms": 0.01999249872469902
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.22803400000000001,
+          "wall_p10_ms": 0.22011,
+          "wall_p90_ms": 0.253285,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.23188800364732742,
+          "instrumented_wall_median_ms": 0.2531185,
+          "host_enqueue_median_ms": 0.2075125,
+          "host_and_measurement_overhead_median_ms": 0.020120999866962433
+        },
+        "speedup_vs_cpu_single_conv": 3.621427195577486,
+        "gpu_speedup_vs_matching_single": 0.08879386709388114,
+        "gpu_parallel_efficiency": 0.04439693354694057,
+        "gpu_processor_time_overhead_ms": 3.487654
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 2,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 1.8407905,
+          "wall_p10_ms": 1.750408,
+          "wall_p90_ms": 2.422992,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 1.882416009902954,
+          "instrumented_wall_median_ms": 1.9223080000000001,
+          "host_enqueue_median_ms": 1.782899,
+          "host_and_measurement_overhead_median_ms": 0.02597151393508912
+        },
+        "gflops_per_s_wall": 38.49031598109617,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 2.838841,
+          "wall_p10_ms": 2.703445,
+          "wall_p90_ms": 2.989036,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 3.090367913246155,
+          "instrumented_wall_median_ms": 3.1165215,
+          "host_enqueue_median_ms": 2.7978955,
+          "host_and_measurement_overhead_median_ms": 0.030296562477111877
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.4145095,
+          "wall_p10_ms": 0.346575,
+          "wall_p90_ms": 0.45366,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.3932640105485916,
+          "instrumented_wall_median_ms": 0.41929,
+          "host_enqueue_median_ms": 0.3728765,
+          "host_and_measurement_overhead_median_ms": 0.0260604973640442
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.524794,
+          "wall_p10_ms": 0.509061,
+          "wall_p90_ms": 0.567131,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.5334720015525818,
+          "instrumented_wall_median_ms": 0.55716,
+          "host_enqueue_median_ms": 0.49012,
+          "host_and_measurement_overhead_median_ms": 0.02154751588821413
+        },
+        "speedup_vs_cpu_single_conv": 32.13534647207273,
+        "gpu_speedup_vs_matching_single": 0.15245379634455958,
+        "gpu_parallel_efficiency": 0.07622689817227979,
+        "gpu_processor_time_overhead_ms": 3.4009455
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "case": "mnist_single",
+        "input_shape": [
+          1,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 1,
+        "output_shape": [
+          1,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 24336,
+        "flops_excluding_bias": 48672,
+        "logical_tensor_bytes": 14112,
+        "resident": {
+          "wall_median_ms": 0.5241725,
+          "wall_p10_ms": 0.505933,
+          "wall_p90_ms": 0.580831,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.5241920053958893,
+          "instrumented_wall_median_ms": 0.5538194999999999,
+          "host_enqueue_median_ms": 0.4903425,
+          "host_and_measurement_overhead_median_ms": 0.02535548644256591
+        },
+        "gflops_per_s_wall": 0.09285492848251291,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 0.595495,
+          "wall_p10_ms": 0.580695,
+          "wall_p90_ms": 0.663965,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.6001279950141907,
+          "instrumented_wall_median_ms": 0.6252059999999999,
+          "host_enqueue_median_ms": 0.5642555,
+          "host_and_measurement_overhead_median_ms": 0.023477497398376457
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.0295005,
+          "wall_p10_ms": 0.029127,
+          "wall_p90_ms": 0.030718,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.03001599945127964,
+          "instrumented_wall_median_ms": 0.047814,
+          "host_enqueue_median_ms": 0.0159635,
+          "host_and_measurement_overhead_median_ms": 0.01786650019139051
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.033759,
+          "wall_p10_ms": 0.033089,
+          "wall_p90_ms": 0.037933,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.03465599939227104,
+          "instrumented_wall_median_ms": 0.0529885,
+          "host_enqueue_median_ms": 0.020095500000000002,
+          "host_and_measurement_overhead_median_ms": 0.018273499806404112
+        },
+        "speedup_vs_cpu_single_conv": 0.23668353452346316,
+        "gpu_speedup_vs_matching_single": 0.07950913105895484,
+        "gpu_parallel_efficiency": null,
+        "gpu_processor_time_overhead_ms": null
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "case": "mnist_batch64",
+        "input_shape": [
+          64,
+          1,
+          28,
+          28
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 2,
+        "output_shape": [
+          64,
+          4,
+          26,
+          26
+        ],
+        "multiply_accumulates": 1557504,
+        "flops_excluding_bias": 3115008,
+        "logical_tensor_bytes": 893088,
+        "resident": {
+          "wall_median_ms": 2.539439,
+          "wall_p10_ms": 2.416651,
+          "wall_p90_ms": 2.716829,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 2.531839966773987,
+          "instrumented_wall_median_ms": 2.5619804999999998,
+          "host_enqueue_median_ms": 2.5057074999999998,
+          "host_and_measurement_overhead_median_ms": 0.025463986915588377
+        },
+        "gflops_per_s_wall": 1.2266520282629352,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 2.9007955,
+          "wall_p10_ms": 2.792174,
+          "wall_p90_ms": 3.050391,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 2.9264479875564575,
+          "instrumented_wall_median_ms": 2.954622,
+          "host_enqueue_median_ms": 2.861802,
+          "host_and_measurement_overhead_median_ms": 0.02558402765655532
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.089165,
+          "wall_p10_ms": 0.087539,
+          "wall_p90_ms": 0.117901,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.08799999952316284,
+          "instrumented_wall_median_ms": 0.1071605,
+          "host_enqueue_median_ms": 0.0743875,
+          "host_and_measurement_overhead_median_ms": 0.018667999188184743
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.2246895,
+          "wall_p10_ms": 0.220847,
+          "wall_p90_ms": 0.240675,
+          "samples": 100,
+          "warmup": 5,
+          "device_event_median_ms": 0.22881600260734558,
+          "instrumented_wall_median_ms": 0.2509555,
+          "host_enqueue_median_ms": 0.205258,
+          "host_and_measurement_overhead_median_ms": 0.02022050213527679
+        },
+        "speedup_vs_cpu_single_conv": 2.6023627659494872,
+        "gpu_speedup_vs_matching_single": 0.028580328174844922,
+        "gpu_parallel_efficiency": 0.014290164087422461,
+        "gpu_processor_time_overhead_ms": 5.0062999999999995
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "case": "synthetic_larger",
+        "input_shape": [
+          8,
+          8,
+          64,
+          64
+        ],
+        "weight_shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "requested_gpu_count": 2,
+        "effective_gpu_count": 2,
+        "output_shape": [
+          8,
+          16,
+          62,
+          62
+        ],
+        "multiply_accumulates": 35426304,
+        "flops_excluding_bias": 70852608,
+        "logical_tensor_bytes": 3021376,
+        "resident": {
+          "wall_median_ms": 2.743703,
+          "wall_p10_ms": 2.629441,
+          "wall_p90_ms": 3.052865,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 2.7248480319976807,
+          "instrumented_wall_median_ms": 2.7582015,
+          "host_enqueue_median_ms": 2.6883305,
+          "host_and_measurement_overhead_median_ms": 0.025751023315429666
+        },
+        "gflops_per_s_wall": 25.823716342475844,
+        "scope": "Forward convolution plus bias and output allocation. Input and weights already resident. GPU wall timing includes completion synchronization. Events use separate samples.",
+        "host_to_host": {
+          "wall_median_ms": 3.6240115,
+          "wall_p10_ms": 3.529481,
+          "wall_p90_ms": 3.780451,
+          "samples": 30,
+          "warmup": 20,
+          "device_event_median_ms": 3.598479986190796,
+          "instrumented_wall_median_ms": 3.6242419999999997,
+          "host_enqueue_median_ms": 3.5822775,
+          "host_and_measurement_overhead_median_ms": 0.025763533546447892
+        },
+        "h2d_copy": {
+          "wall_median_ms": 0.35212,
+          "wall_p10_ms": 0.341791,
+          "wall_p90_ms": 0.405704,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.3523840010166168,
+          "instrumented_wall_median_ms": 0.3735725,
+          "host_enqueue_median_ms": 0.32130349999999996,
+          "host_and_measurement_overhead_median_ms": 0.020713499439239502
+        },
+        "d2h_copy": {
+          "wall_median_ms": 0.533489,
+          "wall_p10_ms": 0.508616,
+          "wall_p90_ms": 0.551741,
+          "samples": 30,
+          "warmup": 5,
+          "device_event_median_ms": 0.5308000147342682,
+          "instrumented_wall_median_ms": 0.554072,
+          "host_enqueue_median_ms": 0.5013055,
+          "host_and_measurement_overhead_median_ms": 0.021225485206604
+        },
+        "speedup_vs_cpu_single_conv": 21.560074286466136,
+        "gpu_speedup_vs_matching_single": 0.05789803050840415,
+        "gpu_parallel_efficiency": 0.028949015254202074,
+        "gpu_processor_time_overhead_ms": 5.328551
+      }
+    ],
+    "costs": {
+      "cpu": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.275516,
+              "wall_p10_ms": 0.230405,
+              "wall_p90_ms": 0.307597,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": null
+            },
+            "images_per_s_wall": 3629.5532745829646,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 0
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 8.5651275,
+              "wall_p10_ms": 8.257764,
+              "wall_p90_ms": 9.109896,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": null
+            },
+            "images_per_s_wall": 7472.159638020567,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 0
+          }
+        ]
+      },
+      "cpu_openmp": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.169721,
+              "wall_p10_ms": 0.137348,
+              "wall_p90_ms": 0.200885,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": null
+            },
+            "images_per_s_wall": 5892.022790344153,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 0
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 3.048937,
+              "wall_p10_ms": 2.877646,
+              "wall_p90_ms": 6.387824,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": null
+            },
+            "images_per_s_wall": 20990.92241000716,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 0
+          }
+        ]
+      },
+      "cuda": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.35139,
+              "wall_p10_ms": 0.331079,
+              "wall_p90_ms": 0.418438,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.3486559987068176,
+              "instrumented_wall_median_ms": 0.36802500000000005,
+              "host_enqueue_median_ms": 0.3296485,
+              "host_and_measurement_overhead_median_ms": 0.019534996756553652
+            },
+            "images_per_s_wall": 2845.840803665443,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 0.3581455,
+              "wall_p10_ms": 0.339342,
+              "wall_p90_ms": 0.425203,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.35953599214553833,
+              "instrumented_wall_median_ms": 0.3826595,
+              "host_enqueue_median_ms": 0.335184,
+              "host_and_measurement_overhead_median_ms": 0.01975798689937594
+            },
+            "images_per_s_wall": 178698.32232989106,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          }
+        ],
+        "empty_kernel_launch": {
+          "wall_median_ms": 0.0131265,
+          "wall_p10_ms": 0.01263,
+          "wall_p90_ms": 0.013514,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.013151999562978745,
+          "instrumented_wall_median_ms": 0.02837,
+          "host_enqueue_median_ms": 0.0038634999999999997,
+          "host_and_measurement_overhead_median_ms": 0.015329500028192998
+        }
+      },
+      "cuda_shared": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.3478365,
+              "wall_p10_ms": 0.33052,
+              "wall_p90_ms": 0.377891,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.3561760038137436,
+              "instrumented_wall_median_ms": 0.376863,
+              "host_enqueue_median_ms": 0.3259055,
+              "host_and_measurement_overhead_median_ms": 0.019692507759094258
+            },
+            "images_per_s_wall": 2874.913932264153,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 0.3556615,
+              "wall_p10_ms": 0.339518,
+              "wall_p90_ms": 0.404424,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.36633598804473877,
+              "instrumented_wall_median_ms": 0.38678049999999997,
+              "host_enqueue_median_ms": 0.32877,
+              "host_and_measurement_overhead_median_ms": 0.019831499855041512
+            },
+            "images_per_s_wall": 179946.38160160714,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          }
+        ],
+        "empty_kernel_launch": {
+          "wall_median_ms": 0.013785,
+          "wall_p10_ms": 0.013403,
+          "wall_p90_ms": 0.017398,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.014543999917805195,
+          "instrumented_wall_median_ms": 0.030428,
+          "host_enqueue_median_ms": 0.004129000000000001,
+          "host_and_measurement_overhead_median_ms": 0.016022999925196173
+        }
+      },
+      "cudnn": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.44474250000000004,
+              "wall_p10_ms": 0.422988,
+              "wall_p90_ms": 0.5194,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.43406400084495544,
+              "instrumented_wall_median_ms": 0.455099,
+              "host_enqueue_median_ms": 0.4171945,
+              "host_and_measurement_overhead_median_ms": 0.020179506413459752
+            },
+            "images_per_s_wall": 2248.492104982096,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 0.4480425,
+              "wall_p10_ms": 0.427353,
+              "wall_p90_ms": 0.493449,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.4458079934120178,
+              "instrumented_wall_median_ms": 0.4669495,
+              "host_enqueue_median_ms": 0.4220365,
+              "host_and_measurement_overhead_median_ms": 0.020340999424934364
+            },
+            "images_per_s_wall": 142843.59184675562,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          }
+        ]
+      },
+      "pytorch_cpu": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.0834525,
+              "wall_p10_ms": 0.074583,
+              "wall_p90_ms": 0.105382,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": null
+            },
+            "images_per_s_wall": 11982.864503759623,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 0
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 1.076467,
+              "wall_p10_ms": 1.025592,
+              "wall_p90_ms": 1.151267,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": null
+            },
+            "images_per_s_wall": 59453.75009173527,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 0
+          }
+        ]
+      },
+      "pytorch_cuda": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.3796075,
+              "wall_p10_ms": 0.360154,
+              "wall_p90_ms": 0.404597,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.3917759954929352,
+              "instrumented_wall_median_ms": 0.417244,
+              "host_enqueue_median_ms": 0.3489135,
+              "host_and_measurement_overhead_median_ms": 0.024694496884345996
+            },
+            "images_per_s_wall": 2634.299901872329,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 0.377883,
+              "wall_p10_ms": 0.351013,
+              "wall_p90_ms": 0.404027,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.37860800325870514,
+              "instrumented_wall_median_ms": 0.4028665,
+              "host_enqueue_median_ms": 0.3466175,
+              "host_and_measurement_overhead_median_ms": 0.023606999847412102
+            },
+            "images_per_s_wall": 169364.59168578632,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          }
+        ]
+      },
+      "cuda_dataparallel": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.913925,
+              "wall_p10_ms": 0.873823,
+              "wall_p90_ms": 1.026275,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.8878239989280701,
+              "instrumented_wall_median_ms": 0.9187335,
+              "host_enqueue_median_ms": 0.8801464999999999,
+              "host_and_measurement_overhead_median_ms": 0.026493978996276868
+            },
+            "images_per_s_wall": 1094.1816888694368,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 2.173828,
+              "wall_p10_ms": 2.037946,
+              "wall_p90_ms": 2.371912,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 2.167199969291687,
+              "instrumented_wall_median_ms": 2.2007315,
+              "host_enqueue_median_ms": 2.139653,
+              "host_and_measurement_overhead_median_ms": 0.025005006988525258
+            },
+            "images_per_s_wall": 29441.151737855987,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 2
+          }
+        ],
+        "dataparallel_identity_diagnostic": {
+          "wall_median_ms": 0.9391265,
+          "wall_p10_ms": 0.875055,
+          "wall_p90_ms": 1.034891,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.9882879853248596,
+          "instrumented_wall_median_ms": 1.017017,
+          "host_enqueue_median_ms": 0.9061215,
+          "host_and_measurement_overhead_median_ms": 0.025614023994445845
+        },
+        "dataparallel_identity_scope": "Scatter, worker dispatch and gather for an identity operation. No model parameters. Input and output are images, so this diagnostic is not an exact decomposition of CNN overhead.",
+        "empty_kernel_launch": {
+          "wall_median_ms": 0.017847500000000002,
+          "wall_p10_ms": 0.01714,
+          "wall_p90_ms": 0.018986,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.017791999503970146,
+          "instrumented_wall_median_ms": 0.035993,
+          "host_enqueue_median_ms": 0.0047795,
+          "host_and_measurement_overhead_median_ms": 0.018110999946534635
+        }
+      },
+      "cudnn_dataparallel": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.9595165,
+              "wall_p10_ms": 0.94258,
+              "wall_p90_ms": 1.058317,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.947519987821579,
+              "instrumented_wall_median_ms": 0.9731989999999999,
+              "host_enqueue_median_ms": 0.9217884999999999,
+              "host_and_measurement_overhead_median_ms": 0.025644006643295303
+            },
+            "images_per_s_wall": 1042.1915621044557,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 2.368229,
+              "wall_p10_ms": 2.20755,
+              "wall_p90_ms": 2.533286,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 2.3231040239334106,
+              "instrumented_wall_median_ms": 2.3536295000000003,
+              "host_enqueue_median_ms": 2.321134,
+              "host_and_measurement_overhead_median_ms": 0.025587026313781847
+            },
+            "images_per_s_wall": 27024.413601894074,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 2
+          }
+        ],
+        "dataparallel_identity_diagnostic": {
+          "wall_median_ms": 0.9358949999999999,
+          "wall_p10_ms": 0.863778,
+          "wall_p90_ms": 1.021601,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.9349760115146637,
+          "instrumented_wall_median_ms": 0.964818,
+          "host_enqueue_median_ms": 0.894569,
+          "host_and_measurement_overhead_median_ms": 0.02516851969909667
+        },
+        "dataparallel_identity_scope": "Scatter, worker dispatch and gather for an identity operation. No model parameters. Input and output are images, so this diagnostic is not an exact decomposition of CNN overhead."
+      },
+      "pytorch_dataparallel": {
+        "inference": [
+          {
+            "batch_size": 1,
+            "resident": {
+              "wall_median_ms": 0.8670795,
+              "wall_p10_ms": 0.842371,
+              "wall_p90_ms": 0.990453,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 0.8701120018959045,
+              "instrumented_wall_median_ms": 0.9004719999999999,
+              "host_enqueue_median_ms": 0.8311345,
+              "host_and_measurement_overhead_median_ms": 0.026392503433227577
+            },
+            "images_per_s_wall": 1153.2967853582054,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 1
+          },
+          {
+            "batch_size": 64,
+            "resident": {
+              "wall_median_ms": 3.061713,
+              "wall_p10_ms": 2.913965,
+              "wall_p90_ms": 3.239981,
+              "samples": 100,
+              "warmup": 20,
+              "device_event_median_ms": 3.016144037246704,
+              "instrumented_wall_median_ms": 3.0427660000000003,
+              "host_enqueue_median_ms": 3.0189075,
+              "host_and_measurement_overhead_median_ms": 0.026057456024169978
+            },
+            "images_per_s_wall": 20903.33091311955,
+            "scope": "CNN forward to 10 logits. Includes convolution, ReLU, pooling and dense layer. Excludes transfers and class selection.",
+            "effective_gpu_count": 2
+          }
+        ],
+        "dataparallel_identity_diagnostic": {
+          "wall_median_ms": 0.905483,
+          "wall_p10_ms": 0.851013,
+          "wall_p90_ms": 0.984175,
+          "samples": 100,
+          "warmup": 20,
+          "device_event_median_ms": 0.9226559996604919,
+          "instrumented_wall_median_ms": 0.948657,
+          "host_enqueue_median_ms": 0.8713234999999999,
+          "host_and_measurement_overhead_median_ms": 0.02440951196289065
+        },
+        "dataparallel_identity_scope": "Scatter, worker dispatch and gather for an identity operation. No model parameters. Input and output are images, so this diagnostic is not an exact decomposition of CNN overhead."
+      }
+    },
+    "methodology": {
+      "precision": "FP32, TF32 disabled, fixed shapes, fixed random seed, no AMP",
+      "gpu_interval": "CUDA-event interval. May include submission gaps. It is not an isolated instruction count or an occupancy measurement.",
+      "overhead": "Paired wall minus CUDA-event time includes Python/C ABI dispatch, event instrumentation and synchronization. Reported as aggregate overhead, not a pure launch latency.",
+      "cpu_efficiency": "T1/(p*Tp) for the same native CPU convolution at p OpenMP workers. It does not define efficiency for heterogeneous GPU cores.",
+      "transfer": "Pageable host buffers and preallocated copy destinations. Host-to-host convolution includes allocations and both transfers.",
+      "cost": "Logical tensor bytes and FLOPs are calculated. Process RSS and GPU tensor allocation are measured. Energy and monetary cost remain null without power telemetry and a configured price.",
+      "statistics": "One local experiment, repeated latency samples. p10/p90 describe timing spread, not independent training-run uncertainty."
+    }
+  },
+  "validation": {
+    "environment": {
+      "utc_time": "2026-10-14T09:17:33.311131+00:00",
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "torch": "2.11.0+cu128",
+      "cuda_runtime": "12.8",
+      "cudnn_version": 91900,
+      "source_sha256": "8abc77c10910c0ff5f84fb7097a3304d2c651965b25ccdb6b238d4a4b1112056",
+      "git_commit": "370e8a418f76c32129057a95eb7993f19095cd3f",
+      "cpu_logical_count": 4,
+      "torch_cpu_threads": 4,
+      "source_dirty": false,
+      "cpu_name": "Intel(R) Xeon(R) CPU @ 2.00GHz",
+      "gpu": {
+        "name": "Tesla T4",
+        "compute_capability": [
+          7,
+          5
+        ],
+        "multiprocessors": 40,
+        "total_memory_bytes": 15636037632
+      },
+      "gpus": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "compute_capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 15636037632
+        },
+        {
+          "index": 1,
+          "name": "Tesla T4",
+          "compute_capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 15636037632
+        }
+      ],
+      "cuda_compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0",
+      "cpu_compiler": null
+    },
+    "checks": [
+      {
+        "backend": "cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.960464477539063e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.2351741790771484e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 3.5762786865234375e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 4.76837158203125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 1.1920928955078125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 5.960464477539063e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 7.62939453125e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 4.589557647705078e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 9.059906005859375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 3.814697265625e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.960464477539063e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.2351741790771484e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 3.5762786865234375e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 4.76837158203125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 1.1920928955078125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 5.960464477539063e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 7.62939453125e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 4.589557647705078e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 9.059906005859375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 3.814697265625e-06,
+        "passed": true
+      },
+      {
+        "backend": "cpu_openmp",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 1.4901161193847656e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.980232238769531e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 1.1920928955078125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 3.993511199951172e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.9073486328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.7220458984375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.430511474609375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 1.4901161193847656e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.980232238769531e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 1.1920928955078125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 3.993511199951172e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.9073486328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.7220458984375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.430511474609375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_shared",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.980232238769531e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.7881393432617188e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 3.6954879760742188e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.6689300537109375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.0067901611328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.430511474609375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cpu",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.980232238769531e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 3.6954879760742188e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.9073486328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.0067901611328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.9073486328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_cuda",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 1.4901161193847656e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.7881393432617188e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 1.1920928955078125e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 4.291534423828125e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.430511474609375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.245208740234375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.430511474609375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cuda_dataparallel",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.7881393432617188e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 3.6954879760742188e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.6689300537109375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.245208740234375e-06,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 9.5367431640625e-07,
+        "passed": true
+      },
+      {
+        "backend": "cudnn_dataparallel",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 3.725290298461914e-09,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          1,
+          1,
+          4,
+          5,
+          1,
+          2
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 7.450580596923828e-09,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 2.9802322387695312e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          3,
+          7,
+          9,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.7881393432617188e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 0.0,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 3.6954879760742188e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          1,
+          28,
+          28,
+          4,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.6689300537109375e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "forward",
+        "max_absolute_error": 2.384185791015625e-07,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "input_gradient",
+        "max_absolute_error": 4.470348358154297e-08,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "weight_gradient",
+        "max_absolute_error": 5.245208740234375e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "shape": [
+          2,
+          2,
+          33,
+          35,
+          3,
+          3
+        ],
+        "check": "bias_gradient",
+        "max_absolute_error": 1.9073486328125e-06,
+        "passed": true
+      },
+      {
+        "backend": "pytorch_dataparallel",
+        "check": "hand_computed_and_finite_difference",
+        "analytic": 75.19999694824219,
+        "numerical": 75.20103454589844,
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "tolerance": {
+      "rtol": 0.0003,
+      "atol": 0.0003
+    }
+  },
+  "two_gpu_comparison": [
+    {
+      "single_backend": "cuda",
+      "parallel_backend": "cuda_dataparallel",
+      "training_speedup": 0.37918274335431695,
+      "training_parallel_efficiency": 0.18959137167715848,
+      "gpu_time_cost_ratio": 5.274501635564028,
+      "gpu_time_overhead_s": 25.914052793000394
+    },
+    {
+      "single_backend": "cudnn",
+      "parallel_backend": "cudnn_dataparallel",
+      "training_speedup": 0.3659045262978499,
+      "training_parallel_efficiency": 0.18295226314892496,
+      "gpu_time_cost_ratio": 5.46590669493927,
+      "gpu_time_overhead_s": 28.30708066799974
+    },
+    {
+      "single_backend": "pytorch_cuda",
+      "parallel_backend": "pytorch_dataparallel",
+      "training_speedup": 0.29489815932371594,
+      "training_parallel_efficiency": 0.14744907966185797,
+      "gpu_time_cost_ratio": 6.782002317635892,
+      "gpu_time_overhead_s": 31.35168862299986
+    }
+  ]
+}

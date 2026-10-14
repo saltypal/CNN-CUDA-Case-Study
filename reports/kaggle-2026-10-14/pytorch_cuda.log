@@ -1,0 +1,7 @@
+pytorch_cuda epoch 01/50: train loss 0.8641, val accuracy 88.25%, train 0.159s
+pytorch_cuda epoch 10/50: train loss 0.0625, val accuracy 94.42%, train 0.105s
+pytorch_cuda epoch 20/50: train loss 0.0105, val accuracy 94.33%, train 0.111s
+pytorch_cuda epoch 30/50: train loss 0.0031, val accuracy 94.58%, train 0.101s
+pytorch_cuda epoch 40/50: train loss 0.0018, val accuracy 94.58%, train 0.113s
+pytorch_cuda epoch 50/50: train loss 0.0013, val accuracy 94.42%, train 0.101s
+COMPLETE pytorch_cuda: 5.42s training, test 95.60%

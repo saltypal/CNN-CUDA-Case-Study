@@ -1,0 +1,7 @@
+cuda epoch 01/50: train loss 0.8641, val accuracy 88.25%, train 0.284s
+cuda epoch 10/50: train loss 0.0626, val accuracy 94.42%, train 0.115s
+cuda epoch 20/50: train loss 0.0106, val accuracy 94.33%, train 0.109s
+cuda epoch 30/50: train loss 0.0031, val accuracy 94.58%, train 0.115s
+cuda epoch 40/50: train loss 0.0018, val accuracy 94.58%, train 0.116s
+cuda epoch 50/50: train loss 0.0013, val accuracy 94.33%, train 0.125s
+COMPLETE cuda: 6.06s training, test 95.60%

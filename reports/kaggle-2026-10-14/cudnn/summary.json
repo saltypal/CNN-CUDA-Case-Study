@@ -1,0 +1,30 @@
+{
+  "backend": "cudnn",
+  "epochs_completed": 50,
+  "training_s": 6.338484567999842,
+  "gpu_count": 1,
+  "global_batch_size": 64,
+  "gpu_training_allocation_seconds": 6.338484567999842,
+  "peak_gpu_tensor_allocated_bytes_per_device": [
+    92605952
+  ],
+  "training_and_validation_wall_s": 6.990411695000034,
+  "validation_s": 0.5707530009999573,
+  "mean_epoch_training_s": 0.12676969135999683,
+  "training_images_per_s": 37863.94009881353,
+  "test_loss": 0.24444190979003907,
+  "test_accuracy": 0.956000030040741,
+  "final_validation_accuracy": 0.9433333277702332,
+  "best_validation_accuracy": 0.9508333802223206,
+  "setup_s": 0.7648427940000033,
+  "initial_data_and_model_transfer_s": 0.39522617400001536,
+  "warmup_s": 0.24150570699998752,
+  "test_evaluation_s": 0.009089797999990878,
+  "peak_process_rss_bytes": 1269428224,
+  "peak_gpu_tensor_allocated_bytes": 92605952,
+  "split_sha256": "0bd89bc665f215079e1f86998552f3117665b432c80277921ec9e2689f5afe37",
+  "timing_scope": "Sum of synchronized training epochs. Validation, checkpoint I/O, warmup and initial data/model transfer excluded. Mini-batch indexing, autograd and optimizer included.",
+  "implementation_scope": "Only convolution differs. PyTorch supplies ReLU, max pooling, dense layer, cross entropy, autograd integration and SGD for every backend.",
+  "monetary_training_cost": null,
+  "energy_joules": null
+}

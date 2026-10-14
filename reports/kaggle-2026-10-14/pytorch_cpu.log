@@ -1,0 +1,7 @@
+pytorch_cpu epoch 01/50: train loss 0.8641, val accuracy 88.25%, train 0.254s
+pytorch_cpu epoch 10/50: train loss 0.0626, val accuracy 94.42%, train 0.199s
+pytorch_cpu epoch 20/50: train loss 0.0106, val accuracy 94.33%, train 0.192s
+pytorch_cpu epoch 30/50: train loss 0.0031, val accuracy 94.58%, train 0.196s
+pytorch_cpu epoch 40/50: train loss 0.0018, val accuracy 94.58%, train 0.202s
+pytorch_cpu epoch 50/50: train loss 0.0013, val accuracy 94.33%, train 0.211s
+COMPLETE pytorch_cpu: 10.17s training, test 95.60%
