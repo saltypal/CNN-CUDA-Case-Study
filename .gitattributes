@@ -5,3 +5,6 @@
 *.sh text eol=lf
 *.ipynb text eol=lf
 *.md text eol=lf
+
+# Preserve measured artifact bytes and manifest hashes across platforms.
+reports/full-mnist-2026-10-14/** -text
