@@ -46,12 +46,24 @@ def create_report(run_root):
         writer.writerow(headers)
         writer.writerows(rows)
     hardware=benchmark['environment']
+    config=benchmark['config']
+    full_dataset=config.get('dataset_scope','subset')=='full'
+    dataset_description=(
+        f"Full MNIST: {config['train_count']:,} training and {config['validation_count']:,} validation images cover the entire official training collection. All {config['test_count']:,} official test images remain separate. Development splits preserve digit proportions. Input values use x/255."
+        if full_dataset else
+        f"MNIST subset: {config['train_count']:,} training, {config['validation_count']:,} validation and {config['test_count']:,} separate test images. Splits contain equal numbers of each digit. Input values use x/255."
+    )
+    scope_description=(
+        f"This is one seed and one Kaggle runtime. Test accuracy uses all {config['test_count']:,} official MNIST test images."
+        if full_dataset else
+        f"This is one seed and one Kaggle runtime. Fifty epochs on a small balanced subset can overfit. Test accuracy uses a held-out {config['test_count']:,}-image subset, not the full MNIST test set."
+    )
     text=['# Inside a CNN: measured CPU/CUDA case study','',
         f"Hardware: {hardware['cpu_name']}, {hardware.get('gpu',{}).get('name','CPU only')}. The saved environment records the execution platform and available GPUs.",
         f"Source SHA-256: `{hardware['source_sha256']}`. Experiment Git commit: `{hardware.get('git_commit')}`.",
         '', '## Model and dataset','',
         'One FP32 convolution with four 3x3 filters, stride 1, valid padding, ReLU, 2x2 max pooling, and a 676-to-10 linear classifier. Total: 6,810 trainable parameters.',
-        'Exactly 6,000 images from MNIST training data: 4,800 train and 1,200 validation. A separate 1,000-image subset of MNIST test data remains disjoint. Splits contain equal numbers of each digit. Input values use x/255.',
+        dataset_description,
         'Every trained backend starts with the same weights, shuffled indices, SGD learning rate 0.05, momentum 0.9, global batch size 64, seed 42 and 50 epochs. Two-GPU DataParallel assigns 32 examples to each GPU. Batch 1 uses only one GPU.',
         '', '## Implementation boundary','',
         'Custom CPU and CUDA implement convolution forward, input gradient, weight gradient and bias gradient. The direct cuDNN backend invokes the cuDNN C API through ctypes. PyTorch supplies tensor storage, the remaining CNN layers, loss and SGD for all paths. Thus custom CUDA training is a hybrid CNN with a custom convolution, rather than a fully handwritten neural-network runtime.',
@@ -84,7 +96,7 @@ def create_report(run_root):
         'Energy was not measured. Monetary cost remains unspecified because no rental or electricity rate was provided. A configured per-GPU-hour rate can calculate a time-based charge without claiming that it measures electricity consumption or actual Kaggle quota accounting.',
         '', '## Validation and limits','',
         f"{len(validation['checks'])} correctness checks passed. Forward and all convolution gradients match the PyTorch CPU reference within the declared tolerance. Checks cover multiple channels, batches, non-square inputs, partial CUDA tiles, a hand-computed case and an independent central-difference derivative.",
-        'This is one seed and one Kaggle runtime. Fifty epochs on a small balanced subset can overfit. Test accuracy measures this held-out 1,000-image subset, not the full MNIST test set. Timing samples are not independent repeated training trials. Runtime contention and host/framework overhead can affect rankings.',
+        scope_description+' Timing samples are not independent repeated training trials. Runtime contention and host/framework overhead can affect rankings.',
         'Training all paths for the same epoch count measures fixed-workload time. It does not establish equal time to a target accuracy. A slow custom CUDA result is valid evidence and must remain visible.',
         '', '## Sources','',
         '- [PyTorch Conv2d](https://docs.pytorch.org/docs/2.9/generated/torch.nn.Conv2d.html)',

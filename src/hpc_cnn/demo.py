@@ -13,8 +13,9 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--run-root',default=str(ROOT/'results/main'))
     parser.add_argument('--count',type=int,default=10)
+    parser.add_argument('--config',help='Use the same configuration as the saved training run.')
     args=parser.parse_args()
-    config=read_config()
+    config=read_config(args.config)
     configure(config)
     data,_=prepare_data(ROOT/'data',config)
     x,y=data['test']

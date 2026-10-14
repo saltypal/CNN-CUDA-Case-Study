@@ -1,4 +1,4 @@
-"""Read official IDX files and persist stratified, disjoint 10% splits."""
+"""Read official IDX files and persist disjoint subset or full-data splits."""
 import gzip
 import hashlib
 import struct
@@ -41,8 +41,33 @@ def balanced_indices(labels,count,rng):
     # Exactly 10 balanced classes, useful for a small controlled experiment.
     if count%10:
         raise ValueError('This experiment uses split sizes divisible by ten.')
-    groups=[rng.permutation(np.flatnonzero(labels==digit))[:count//10] for digit in range(10)]
+    class_indices=[np.flatnonzero(labels==digit) for digit in range(10)]
+    if any(len(indices)<count//10 for indices in class_indices):
+        raise ValueError('Not enough images to draw the requested balanced subset.')
+    groups=[rng.permutation(indices)[:count//10] for indices in class_indices]
     return rng.permutation(np.concatenate(groups))
+
+def full_training_split(labels,train_count,rng):
+    """Retain all development images with proportional class allocation.
+
+    Largest remainders make the training size exact while rounding each digit's
+    share by at most one image. The remainder of each class becomes validation.
+    """
+    if not 0<train_count<len(labels):
+        raise ValueError('Full-data training needs a nonempty validation split.')
+    class_indices=[np.flatnonzero(labels==digit) for digit in range(10)]
+    desired=np.array([len(indices)*train_count/len(labels) for indices in class_indices])
+    counts=np.floor(desired).astype(int)
+    remaining=train_count-int(counts.sum())
+    order=np.argsort(-(desired-counts),kind='stable')
+    counts[order[:remaining]]+=1
+    training=[]
+    validation=[]
+    for indices,count in zip(class_indices,counts):
+        shuffled=rng.permutation(indices)
+        training.append(shuffled[:count])
+        validation.append(shuffled[count:])
+    return rng.permutation(np.concatenate(training)),rng.permutation(np.concatenate(validation))
 
 def prepare_data(root,config):
     root=Path(root)
@@ -52,19 +77,31 @@ def prepare_data(root,config):
     test_images=read_idx(root/'t10k-images-idx3-ubyte.gz')
     test_labels=read_idx(root/'t10k-labels-idx1-ubyte.gz')
     rng=np.random.default_rng(config['seed'])
-    development=balanced_indices(train_labels,config['train_count']+config['validation_count'],rng)
-    train_parts=[]
-    validation_parts=[]
-    for digit in range(10):
-        group=development[train_labels[development]==digit]
-        boundary=config['train_count']//10
-        train_parts.append(group[:boundary])
-        validation_parts.append(group[boundary:])
-    train_indices=rng.permutation(np.concatenate(train_parts))
-    validation_indices=rng.permutation(np.concatenate(validation_parts))
-    test_indices=balanced_indices(test_labels,config['test_count'],rng)
+    if config.get('dataset_scope','subset')=='full':
+        if config['train_count']+config['validation_count']!=len(train_labels):
+            raise ValueError('Full-data train and validation must cover all official training images.')
+        if config['test_count']!=len(test_labels):
+            raise ValueError('Full-data evaluation must use the complete official test set.')
+        train_indices,validation_indices=full_training_split(train_labels,config['train_count'],rng)
+        test_indices=rng.permutation(len(test_labels))
+    else:
+        development=balanced_indices(train_labels,config['train_count']+config['validation_count'],rng)
+        train_parts=[]
+        validation_parts=[]
+        for digit in range(10):
+            group=development[train_labels[development]==digit]
+            boundary=config['train_count']//10
+            train_parts.append(group[:boundary])
+            validation_parts.append(group[boundary:])
+        train_indices=rng.permutation(np.concatenate(train_parts))
+        validation_indices=rng.permutation(np.concatenate(validation_parts))
+        test_indices=balanced_indices(test_labels,config['test_count'],rng)
     assert len(set(train_indices)&set(validation_indices))==0
     splits={'train':train_indices,'validation':validation_indices,'test':test_indices}
+    for name,indices in splits.items():
+        expected=config['validation_count' if name=='validation' else name+'_count']
+        if len(indices)!=expected or len(np.unique(indices))!=expected:
+            raise ValueError(f'Incorrect or duplicate {name} split indices.')
     np.savez(root/'split_indices.npz',**splits)
     data={}
     for name,indices in splits.items():
