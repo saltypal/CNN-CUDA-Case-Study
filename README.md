@@ -151,11 +151,11 @@ cd /kaggle/working/cnn-cuda-case-study-source
 PYTHONPATH=src python -m hpc_cnn.demo --run-root /kaggle/working/cnn-cuda-case-study-results
 ```
 
-Checkpoint loading and cold initialization are separate from warmed benchmark latency. Use the measured tables when discussing performance. The final 11-slide presentation uses the Project Kickoff template and follows the three-presenter sequence:
+Checkpoint loading and cold initialization are separate from warmed benchmark latency. Use the measured tables when discussing performance. The 12-slide presentation follows the supplied dark, diagram-led reference and keeps the three-presenter sequence:
 
-- Person 1, slides 1–3: CNN basics, sequential versus parallel work, CPU execution with OpenMP and its advantages/disadvantages.
-- Person 2, slides 4–7: GPGPU, CUDA execution, kernels and shared program design, two-GPU DataParallel.
-- Person 3, slides 8–11: training results, convolution and inference results, efficiency/overhead/cost, conclusion and live demo.
+- Prithiv, slides 2–4: CNN basics, sequential versus parallel work, CPU execution with OpenMP and its advantages/disadvantages.
+- Satya, slides 5–8: GPGPU, CUDA execution, kernels and shared program design, two-GPU DataParallel.
+- Roydon, slides 9–12: measured results, efficiency/overhead/cost, conclusion and the live checkpoint demo.
 
 The explanations use illustrations and short text. All seven measured configurations remain in the result tables, and the speaker notes contain the demo command and timing definitions. Earlier deck versions remain in their respective releases.
 
