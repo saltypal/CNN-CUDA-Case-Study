@@ -1,0 +1,19 @@
+{
+  "kernel": "satyapaladugu/cnn-cuda-case-study-full-mnist",
+  "url": "https://www.kaggle.com/code/satyapaladugu/cnn-cuda-case-study-full-mnist",
+  "source_commit": "42624fca4ba9b278076097e076363057b2d32a27",
+  "version_number": 2,
+  "dataset_scope": "full",
+  "epochs": 50,
+  "train_count": 48000,
+  "validation_count": 12000,
+  "test_count": 10000,
+  "status": {
+    "status": "COMPLETE",
+    "failureMessage": null
+  },
+  "downloaded_files": 2,
+  "destination": "D:\\Bunker\\BaseCamp\\HighPerformanceComputing\\CNN CUDA Case Study\\results\\kaggle-full-download",
+  "archive_sha256": "41279dad3738344de2efde91a22a9cf66f7747d4f7ab4afa770ead7f9c93570a",
+  "archive_bytes": 3450210
+}

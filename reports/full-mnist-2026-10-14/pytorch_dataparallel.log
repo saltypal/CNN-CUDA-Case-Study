@@ -1,0 +1,7 @@
+pytorch_dataparallel epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 3.682s
+pytorch_dataparallel epoch 10/50: train loss 0.0625, val accuracy 96.57%, train 3.688s
+pytorch_dataparallel epoch 20/50: train loss 0.0490, val accuracy 97.16%, train 3.649s
+pytorch_dataparallel epoch 30/50: train loss 0.0460, val accuracy 97.03%, train 3.584s
+pytorch_dataparallel epoch 40/50: train loss 0.0385, val accuracy 97.05%, train 3.668s
+pytorch_dataparallel epoch 50/50: train loss 0.0353, val accuracy 96.92%, train 3.589s
+COMPLETE pytorch_dataparallel: 181.97s training, test 97.15%

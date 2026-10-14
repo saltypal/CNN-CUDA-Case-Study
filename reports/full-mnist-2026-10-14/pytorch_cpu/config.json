@@ -1,0 +1,33 @@
+{
+  "seed": 42,
+  "epochs": 50,
+  "batch_size": 64,
+  "learning_rate": 0.05,
+  "momentum": 0.9,
+  "conv_channels": 4,
+  "cpu_threads": 4,
+  "train_count": 48000,
+  "validation_count": 12000,
+  "test_count": 10000,
+  "backends": [
+    "cpu",
+    "cpu_openmp",
+    "cudnn",
+    "pytorch_cpu",
+    "pytorch_cuda",
+    "cudnn_dataparallel",
+    "pytorch_dataparallel"
+  ],
+  "benchmark_repeats": 100,
+  "benchmark_warmup": 20,
+  "gpu_hour_price": null,
+  "cpu_hour_price": null,
+  "training_backends": [
+    "pytorch_cpu",
+    "cudnn",
+    "cudnn_dataparallel",
+    "pytorch_cuda",
+    "pytorch_dataparallel"
+  ],
+  "dataset_scope": "full"
+}

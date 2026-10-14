@@ -1,0 +1,7 @@
+cudnn epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.327s
+cudnn epoch 10/50: train loss 0.0626, val accuracy 96.66%, train 1.252s
+cudnn epoch 20/50: train loss 0.0492, val accuracy 97.15%, train 1.236s
+cudnn epoch 30/50: train loss 0.0460, val accuracy 97.01%, train 1.263s
+cudnn epoch 40/50: train loss 0.0383, val accuracy 97.05%, train 1.243s
+cudnn epoch 50/50: train loss 0.0355, val accuracy 96.86%, train 1.267s
+COMPLETE cudnn: 62.49s training, test 97.17%

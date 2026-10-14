@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "dataset_scope": "full",
+  "identical_initial_weight_bytes": true,
+  "identical_disjoint_splits": true,
+  "full_official_dataset_coverage": true,
+  "epochs_every_backend": 50,
+  "git_commit": "42624fca4ba9b278076097e076363057b2d32a27",
+  "source_sha256": "a58ae19c93ef14abf8722034c45f4edd63913cd9720e07af6c463923b9929414",
+  "pytorch_cudnn_dispatch_observed": true,
+  "validation_checks": 119,
+  "training": [
+    {
+      "backend": "pytorch_cpu",
+      "epochs": 50,
+      "correct_test_predictions": 9713,
+      "test_count": 10000,
+      "test_accuracy": 0.9713,
+      "initial_training_loss": 0.2691007080078125,
+      "final_training_loss": 0.03579502360026042
+    },
+    {
+      "backend": "cudnn",
+      "epochs": 50,
+      "correct_test_predictions": 9717,
+      "test_count": 10000,
+      "test_accuracy": 0.9717,
+      "initial_training_loss": 0.2691007080078125,
+      "final_training_loss": 0.0355313720703125
+    },
+    {
+      "backend": "cudnn_dataparallel",
+      "epochs": 50,
+      "correct_test_predictions": 9717,
+      "test_count": 10000,
+      "test_accuracy": 0.9717,
+      "initial_training_loss": 0.2691007080078125,
+      "final_training_loss": 0.03573208109537761
+    },
+    {
+      "backend": "pytorch_cuda",
+      "epochs": 50,
+      "correct_test_predictions": 9717,
+      "test_count": 10000,
+      "test_accuracy": 0.9717,
+      "initial_training_loss": 0.2691007080078125,
+      "final_training_loss": 0.035514447530110675
+    },
+    {
+      "backend": "pytorch_dataparallel",
+      "epochs": 50,
+      "correct_test_predictions": 9715,
+      "test_count": 10000,
+      "test_accuracy": 0.9715,
+      "initial_training_loss": 0.2691007080078125,
+      "final_training_loss": 0.0353287353515625
+    }
+  ]
+}

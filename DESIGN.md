@@ -5,6 +5,14 @@ inference, overhead and resource-cost comparisons. Keep all implementation and
 persistent results in this project directory. The source is versioned on GitHub.
 The Kaggle notebook fetches the exact/latest commit and saves results separately.
 
+## Current full-MNIST configuration
+
+`config_full_mnist.json` uses 48,000 training, 12,000 validation and all 10,000 official test images. It preserves the four-filter CNN, 50 epochs, global batch 64, seed 42, FP32 and SGD settings.
+
+The five training configurations are PyTorch CPU, direct cuDNN on one/two GPUs, and PyTorch GPU on one/two GPUs. Handwritten CUDA configurations are excluded. Native serial/OpenMP CPU convolution remains an operation benchmark. The full study needs the CUDA/cuDNN runtime and a C++ compiler for that CPU benchmark, without compiling a handwritten GPU convolution.
+
+The implementation contracts below also describe code retained from the original 10% experiment. Its custom CUDA kernels remain historical source and are not part of the current full-dataset comparison. Current evidence is in `reports/full-mnist-2026-10-14`.
+
 ## Scope and contracts
 
 All custom convolutions accept contiguous FP32 NCHW tensors, KCRS filters and a

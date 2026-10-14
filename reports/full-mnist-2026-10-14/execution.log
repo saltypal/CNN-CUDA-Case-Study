@@ -1,0 +1,393 @@
+[{"stream_name":"stderr","time":6.546148641,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.546198909,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.546203238,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.546205694,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.119281648,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.119315406,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.119318915,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.119321361,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.208040035,"data":"Cloning into '/kaggle/working/cnn-cuda-case-study-source'...\n"}
+,{"stream_name":"stderr","time":8.410520366,"data":"Cloning into '/kaggle/working/cnn-cuda-case-study-source'...\n"}
+,{"stream_name":"stderr","time":8.410552146,"data":"\n"}
+,{"stream_name":"stderr","time":8.410555617,"data":"Cloning into '/kaggle/working/cnn-cuda-case-study-source'...\n"}
+,{"stream_name":"stderr","time":9.657160464,"data":"Note: switching to '42624fca4ba9b278076097e076363057b2d32a27'.\n"}
+,{"stream_name":"stderr","time":9.65718489,"data":"\n"}
+,{"stream_name":"stderr","time":9.65718889,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":9.65719395,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":9.657200949,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":9.657203489,"data":"\n"}
+,{"stream_name":"stderr","time":9.657205772,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":9.657208561000001,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":9.657225724,"data":"\n"}
+,{"stream_name":"stderr","time":9.657229512,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":9.657233913,"data":"\n"}
+,{"stream_name":"stderr","time":9.657237801,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":9.657241979,"data":"\n"}
+,{"stream_name":"stderr","time":9.657245362,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":9.65724852,"data":"\n"}
+,{"stream_name":"stderr","time":9.657251672,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":9.657255092,"data":"\n"}
+,{"stream_name":"stderr","time":9.657258312,"data":"HEAD is now at 42624fc Describe library GPU paths in full study report\n"}
+,{"stream_name":"stdout","time":9.664315674000001,"data":"Environment: kaggle Git commit: 42624fca4ba9b278076097e076363057b2d32a27 Results: /kaggle/working/cnn-cuda-case-study-full-mnist-results\n"}
+,{"stream_name":"stderr","time":9.665329665,"data":"Note: switching to '42624fca4ba9b278076097e076363057b2d32a27'.\n"}
+,{"stream_name":"stderr","time":9.665347205,"data":"\n"}
+,{"stream_name":"stderr","time":9.665351517,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":9.665366275,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":9.665370154,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":9.665373613,"data":"\n"}
+,{"stream_name":"stderr","time":9.665376791,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":9.665380127,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":9.665383535,"data":"\n"}
+,{"stream_name":"stderr","time":9.66538662,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":9.665390272,"data":"\n"}
+,{"stream_name":"stderr","time":9.665393391,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":9.665396719,"data":"\n"}
+,{"stream_name":"stderr","time":9.665399817,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":9.665403082,"data":"\n"}
+,{"stream_name":"stderr","time":9.665406214,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":9.665409572,"data":"\n"}
+,{"stream_name":"stderr","time":9.665412656,"data":"HEAD is now at 42624fc Describe library GPU paths in full study report\n"}
+,{"stream_name":"stderr","time":9.665416031,"data":"\n"}
+,{"stream_name":"stderr","time":9.665419232,"data":"Note: switching to '42624fca4ba9b278076097e076363057b2d32a27'.\n"}
+,{"stream_name":"stderr","time":9.66542427,"data":"\n"}
+,{"stream_name":"stderr","time":9.665431491,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":9.665582752,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":9.665596807,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":9.665601025,"data":"\n"}
+,{"stream_name":"stderr","time":9.66560445,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":9.665609237,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":9.665612818,"data":"\n"}
+,{"stream_name":"stderr","time":9.665616114,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":9.665620018,"data":"\n"}
+,{"stream_name":"stderr","time":9.665623171,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":9.665626642,"data":"\n"}
+,{"stream_name":"stderr","time":9.665629793,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":9.665632997,"data":"\n"}
+,{"stream_name":"stderr","time":9.665636302,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":9.665639738,"data":"\n"}
+,{"stream_name":"stderr","time":9.665642755,"data":"HEAD is now at 42624fc Describe library GPU paths in full study report\n"}
+,{"stream_name":"stdout","time":15.896680551,"data":"Python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]\n"}
+,{"stream_name":"stdout","time":15.940142671,"data":"PyTorch: 2.11.0+cu128 CUDA runtime: 12.8 cuDNN: 91900\n"}
+,{"stream_name":"stdout","time":15.940169293,"data":"GPU count: 2\n"}
+,{"stream_name":"stdout","time":15.940173527,"data":"0 Tesla T4 (7, 5)\n"}
+,{"stream_name":"stdout","time":15.940177052,"data":"1 Tesla T4 (7, 5)\n"}
+,{"stream_name":"stdout","time":15.954674711,"data":"{\n"}
+,{"stream_name":"stdout","time":15.954704983,"data":"  \"seed\": 42,\n"}
+,{"stream_name":"stdout","time":15.954710716,"data":"  \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":15.9547143,"data":"  \"batch_size\": 64,\n"}
+,{"stream_name":"stdout","time":15.95471767,"data":"  \"learning_rate\": 0.05,\n"}
+,{"stream_name":"stdout","time":15.954720943,"data":"  \"momentum\": 0.9,\n"}
+,{"stream_name":"stdout","time":15.954724567,"data":"  \"conv_channels\": 4,\n"}
+,{"stream_name":"stdout","time":15.954729541,"data":"  \"cpu_threads\": 4,\n"}
+,{"stream_name":"stdout","time":15.954736081,"data":"  \"train_count\": 48000,\n"}
+,{"stream_name":"stdout","time":15.954738324000001,"data":"  \"validation_count\": 12000,\n"}
+,{"stream_name":"stdout","time":15.954740638,"data":"  \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":15.954742823,"data":"  \"backends\": [\n"}
+,{"stream_name":"stdout","time":15.954745023,"data":"    \"cpu\",\n"}
+,{"stream_name":"stdout","time":15.954747396,"data":"    \"cpu_openmp\",\n"}
+,{"stream_name":"stdout","time":15.954749628,"data":"    \"cudnn\",\n"}
+,{"stream_name":"stdout","time":15.95475179,"data":"    \"pytorch_cpu\",\n"}
+,{"stream_name":"stdout","time":15.954753986,"data":"    \"pytorch_cuda\",\n"}
+,{"stream_name":"stdout","time":15.954756259,"data":"    \"cudnn_dataparallel\",\n"}
+,{"stream_name":"stdout","time":15.954758451,"data":"    \"pytorch_dataparallel\"\n"}
+,{"stream_name":"stdout","time":15.954760673,"data":"  ],\n"}
+,{"stream_name":"stdout","time":15.954762765,"data":"  \"benchmark_repeats\": 100,\n"}
+,{"stream_name":"stdout","time":15.954765065,"data":"  \"benchmark_warmup\": 20,\n"}
+,{"stream_name":"stdout","time":15.954767264000001,"data":"  \"gpu_hour_price\": null,\n"}
+,{"stream_name":"stdout","time":15.954769459,"data":"  \"cpu_hour_price\": null,\n"}
+,{"stream_name":"stdout","time":15.954771618,"data":"  \"training_backends\": [\n"}
+,{"stream_name":"stdout","time":15.954773903,"data":"    \"pytorch_cpu\",\n"}
+,{"stream_name":"stdout","time":15.954777045,"data":"    \"cudnn\",\n"}
+,{"stream_name":"stdout","time":15.95479349,"data":"    \"cudnn_dataparallel\",\n"}
+,{"stream_name":"stdout","time":15.954797629,"data":"    \"pytorch_cuda\",\n"}
+,{"stream_name":"stdout","time":15.954801726,"data":"    \"pytorch_dataparallel\"\n"}
+,{"stream_name":"stdout","time":15.954806138,"data":"  ],\n"}
+,{"stream_name":"stdout","time":15.954810004,"data":"  \"dataset_scope\": \"full\"\n"}
+,{"stream_name":"stdout","time":15.954813556,"data":"}\n"}
+,{"stream_name":"stdout","time":16.1410066,"data":"Run: /usr/bin/python3 -m hpc_cnn.run --config /kaggle/working/cnn-cuda-case-study-full-mnist-results/run_config_full_mnist.json --run-root /kaggle/working/cnn-cuda-case-study-full-mnist-results --skip-completed\n"}
+,{"stream_name":"stdout","time":22.752627633,"data":"cpu: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":22.768552456,"data":"cpu_openmp: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":22.951815862,"data":"cpu: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":22.951843081,"data":"cpu_openmp: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":23.66271921,"data":"cudnn: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":23.687630841,"data":"pytorch_cpu: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":23.865024677,"data":"cudnn: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":23.865054635,"data":"pytorch_cpu: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":24.064136306,"data":"pytorch_cuda: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":24.266096910999998,"data":"pytorch_cuda: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":25.158142766,"data":"cudnn_dataparallel: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":25.230130242,"data":"pytorch_dataparallel: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":25.360337602,"data":"cudnn_dataparallel: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":25.360405388,"data":"pytorch_dataparallel: forward, backward, borders, channels and finite differences PASS\n"}
+,{"stream_name":"stdout","time":35.821805383,"data":"pytorch_cpu epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.859s\n"}
+,{"stream_name":"stdout","time":36.027113341,"data":"pytorch_cpu epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.859s\n"}
+,{"stream_name":"stdout","time":54.542469217,"data":"pytorch_cpu epoch 10/50: train loss 0.0624, val accuracy 96.52%, train 1.879s\n"}
+,{"stream_name":"stdout","time":54.751297258,"data":"pytorch_cpu epoch 10/50: train loss 0.0624, val accuracy 96.52%, train 1.879s\n"}
+,{"stream_name":"stdout","time":75.515733075,"data":"pytorch_cpu epoch 20/50: train loss 0.0491, val accuracy 97.14%, train 1.887s\n"}
+,{"stream_name":"stdout","time":75.718829226,"data":"pytorch_cpu epoch 20/50: train loss 0.0491, val accuracy 97.14%, train 1.887s\n"}
+,{"stream_name":"stdout","time":96.697035869,"data":"pytorch_cpu epoch 30/50: train loss 0.0462, val accuracy 97.01%, train 1.894s\n"}
+,{"stream_name":"stdout","time":96.904023578,"data":"pytorch_cpu epoch 30/50: train loss 0.0462, val accuracy 97.01%, train 1.894s\n"}
+,{"stream_name":"stdout","time":117.936276412,"data":"pytorch_cpu epoch 40/50: train loss 0.0384, val accuracy 97.03%, train 1.876s\n"}
+,{"stream_name":"stdout","time":118.139179987,"data":"pytorch_cpu epoch 40/50: train loss 0.0384, val accuracy 97.03%, train 1.876s\n"}
+,{"stream_name":"stdout","time":138.937906528,"data":"pytorch_cpu epoch 50/50: train loss 0.0358, val accuracy 96.88%, train 1.875s\n"}
+,{"stream_name":"stdout","time":139.117750478,"data":"COMPLETE pytorch_cpu: 94.59s training, test 97.13%\n"}
+,{"stream_name":"stdout","time":139.142089007,"data":"pytorch_cpu epoch 50/50: train loss 0.0358, val accuracy 96.88%, train 1.875s\n"}
+,{"stream_name":"stdout","time":139.142125795,"data":"COMPLETE pytorch_cpu: 94.59s training, test 97.13%\n"}
+,{"stream_name":"stdout","time":145.241286188,"data":"cudnn epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.327s\n"}
+,{"stream_name":"stdout","time":145.443482387,"data":"cudnn epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.327s\n"}
+,{"stream_name":"stdout","time":157.526065948,"data":"cudnn epoch 10/50: train loss 0.0626, val accuracy 96.66%, train 1.252s\n"}
+,{"stream_name":"stdout","time":157.728735287,"data":"cudnn epoch 10/50: train loss 0.0626, val accuracy 96.66%, train 1.252s\n"}
+,{"stream_name":"stdout","time":170.962817237,"data":"cudnn epoch 20/50: train loss 0.0492, val accuracy 97.15%, train 1.236s\n"}
+,{"stream_name":"stdout","time":171.1683433,"data":"cudnn epoch 20/50: train loss 0.0492, val accuracy 97.15%, train 1.236s\n"}
+,{"stream_name":"stdout","time":184.310422057,"data":"cudnn epoch 30/50: train loss 0.0460, val accuracy 97.01%, train 1.263s\n"}
+,{"stream_name":"stdout","time":184.512718286,"data":"cudnn epoch 30/50: train loss 0.0460, val accuracy 97.01%, train 1.263s\n"}
+,{"stream_name":"stdout","time":197.960020978,"data":"cudnn epoch 40/50: train loss 0.0383, val accuracy 97.05%, train 1.243s\n"}
+,{"stream_name":"stdout","time":198.162575508,"data":"cudnn epoch 40/50: train loss 0.0383, val accuracy 97.05%, train 1.243s\n"}
+,{"stream_name":"stdout","time":211.370603226,"data":"cudnn epoch 50/50: train loss 0.0355, val accuracy 96.86%, train 1.267s\n"}
+,{"stream_name":"stdout","time":211.473587298,"data":"COMPLETE cudnn: 62.49s training, test 97.17%\n"}
+,{"stream_name":"stdout","time":211.574688501,"data":"cudnn epoch 50/50: train loss 0.0355, val accuracy 96.86%, train 1.267s\n"}
+,{"stream_name":"stdout","time":211.574715624,"data":"COMPLETE cudnn: 62.49s training, test 97.17%\n"}
+,{"stream_name":"stdout","time":220.505170808,"data":"cudnn_dataparallel epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 3.335s\n"}
+,{"stream_name":"stdout","time":220.707620313,"data":"cudnn_dataparallel epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 3.335s\n"}
+,{"stream_name":"stdout","time":254.248260113,"data":"cudnn_dataparallel epoch 10/50: train loss 0.0627, val accuracy 96.57%, train 3.305s\n"}
+,{"stream_name":"stdout","time":254.45311543,"data":"cudnn_dataparallel epoch 10/50: train loss 0.0627, val accuracy 96.57%, train 3.305s\n"}
+,{"stream_name":"stdout","time":291.66641202,"data":"cudnn_dataparallel epoch 20/50: train loss 0.0488, val accuracy 97.15%, train 3.364s\n"}
+,{"stream_name":"stdout","time":291.871620429,"data":"cudnn_dataparallel epoch 20/50: train loss 0.0488, val accuracy 97.15%, train 3.364s\n"}
+,{"stream_name":"stdout","time":328.933337001,"data":"cudnn_dataparallel epoch 30/50: train loss 0.0462, val accuracy 97.04%, train 3.279s\n"}
+,{"stream_name":"stdout","time":329.138659838,"data":"cudnn_dataparallel epoch 30/50: train loss 0.0462, val accuracy 97.04%, train 3.279s\n"}
+,{"stream_name":"stdout","time":366.553657479,"data":"cudnn_dataparallel epoch 40/50: train loss 0.0384, val accuracy 96.97%, train 3.434s\n"}
+,{"stream_name":"stdout","time":366.759390863,"data":"cudnn_dataparallel epoch 40/50: train loss 0.0384, val accuracy 96.97%, train 3.434s\n"}
+,{"stream_name":"stdout","time":404.126826127,"data":"cudnn_dataparallel epoch 50/50: train loss 0.0357, val accuracy 96.86%, train 3.311s\n"}
+,{"stream_name":"stdout","time":404.331991684,"data":"cudnn_dataparallel epoch 50/50: train loss 0.0357, val accuracy 96.86%, train 3.311s\n"}
+,{"stream_name":"stdout","time":404.484906524,"data":"COMPLETE cudnn_dataparallel: 165.78s training, test 97.17%\n"}
+,{"stream_name":"stdout","time":404.687169017,"data":"COMPLETE cudnn_dataparallel: 165.78s training, test 97.17%\n"}
+,{"stream_name":"stdout","time":410.51119128,"data":"pytorch_cuda epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.077s\n"}
+,{"stream_name":"stdout","time":410.713438576,"data":"pytorch_cuda epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 1.077s\n"}
+,{"stream_name":"stdout","time":420.444740572,"data":"pytorch_cuda epoch 10/50: train loss 0.0627, val accuracy 96.53%, train 1.075s\n"}
+,{"stream_name":"stdout","time":420.6470625,"data":"pytorch_cuda epoch 10/50: train loss 0.0627, val accuracy 96.53%, train 1.075s\n"}
+,{"stream_name":"stdout","time":431.340278697,"data":"pytorch_cuda epoch 20/50: train loss 0.0490, val accuracy 97.12%, train 1.041s\n"}
+,{"stream_name":"stdout","time":431.542455793,"data":"pytorch_cuda epoch 20/50: train loss 0.0490, val accuracy 97.12%, train 1.041s\n"}
+,{"stream_name":"stdout","time":442.140566017,"data":"pytorch_cuda epoch 30/50: train loss 0.0459, val accuracy 97.02%, train 1.023s\n"}
+,{"stream_name":"stdout","time":442.345084863,"data":"pytorch_cuda epoch 30/50: train loss 0.0459, val accuracy 97.02%, train 1.023s\n"}
+,{"stream_name":"stdout","time":452.831944374,"data":"pytorch_cuda epoch 40/50: train loss 0.0384, val accuracy 97.03%, train 0.976s\n"}
+,{"stream_name":"stdout","time":453.034557562,"data":"pytorch_cuda epoch 40/50: train loss 0.0384, val accuracy 97.03%, train 0.976s\n"}
+,{"stream_name":"stdout","time":463.716637918,"data":"pytorch_cuda epoch 50/50: train loss 0.0355, val accuracy 96.92%, train 0.990s\n"}
+,{"stream_name":"stdout","time":463.790457076,"data":"COMPLETE pytorch_cuda: 50.80s training, test 97.17%\n"}
+,{"stream_name":"stdout","time":463.918926657,"data":"pytorch_cuda epoch 50/50: train loss 0.0355, val accuracy 96.92%, train 0.990s\n"}
+,{"stream_name":"stdout","time":463.918969994,"data":"COMPLETE pytorch_cuda: 50.80s training, test 97.17%\n"}
+,{"stream_name":"stdout","time":473.391097661,"data":"pytorch_dataparallel epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 3.682s\n"}
+,{"stream_name":"stdout","time":473.596874659,"data":"pytorch_dataparallel epoch 01/50: train loss 0.2691, val accuracy 96.20%, train 3.682s\n"}
+,{"stream_name":"stdout","time":511.549582213,"data":"pytorch_dataparallel epoch 10/50: train loss 0.0625, val accuracy 96.57%, train 3.688s\n"}
+,{"stream_name":"stdout","time":511.755435011,"data":"pytorch_dataparallel epoch 10/50: train loss 0.0625, val accuracy 96.57%, train 3.688s\n"}
+,{"stream_name":"stdout","time":553.553778613,"data":"pytorch_dataparallel epoch 20/50: train loss 0.0490, val accuracy 97.16%, train 3.649s\n"}
+,{"stream_name":"stdout","time":553.759661114,"data":"pytorch_dataparallel epoch 20/50: train loss 0.0490, val accuracy 97.16%, train 3.649s\n"}
+,{"stream_name":"stdout","time":595.546246325,"data":"pytorch_dataparallel epoch 30/50: train loss 0.0460, val accuracy 97.03%, train 3.584s\n"}
+,{"stream_name":"stdout","time":595.752315129,"data":"pytorch_dataparallel epoch 30/50: train loss 0.0460, val accuracy 97.03%, train 3.584s\n"}
+,{"stream_name":"stdout","time":637.679312372,"data":"pytorch_dataparallel epoch 40/50: train loss 0.0385, val accuracy 97.05%, train 3.668s\n"}
+,{"stream_name":"stdout","time":637.884880489,"data":"pytorch_dataparallel epoch 40/50: train loss 0.0385, val accuracy 97.05%, train 3.668s\n"}
+,{"stream_name":"stdout","time":679.62043467,"data":"pytorch_dataparallel epoch 50/50: train loss 0.0353, val accuracy 96.92%, train 3.589s\n"}
+,{"stream_name":"stdout","time":679.826392141,"data":"pytorch_dataparallel epoch 50/50: train loss 0.0353, val accuracy 96.92%, train 3.589s\n"}
+,{"stream_name":"stdout","time":680.090180753,"data":"COMPLETE pytorch_dataparallel: 181.97s training, test 97.15%\n"}
+,{"stream_name":"stdout","time":680.292683947,"data":"COMPLETE pytorch_dataparallel: 181.97s training, test 97.15%\n"}
+,{"stream_name":"stdout","time":683.342057769,"data":"cpu mnist_single: 127.06 us wall\n"}
+,{"stream_name":"stdout","time":683.544311261,"data":"cpu mnist_single: 127.06 us wall\n"}
+,{"stream_name":"stdout","time":684.16458714,"data":"cpu mnist_batch64: 6734.15 us wall\n"}
+,{"stream_name":"stdout","time":684.366727397,"data":"cpu mnist_batch64: 6734.15 us wall\n"}
+,{"stream_name":"stdout","time":687.146159017,"data":"cpu synthetic_larger: 58799.76 us wall\n"}
+,{"stream_name":"stdout","time":687.351037599,"data":"cpu synthetic_larger: 58799.76 us wall\n"}
+,{"stream_name":"stdout","time":688.246756376,"data":"cpu_openmp mnist_single: 67.34 us wall\n"}
+,{"stream_name":"stdout","time":688.449908577,"data":"cpu_openmp mnist_single: 67.34 us wall\n"}
+,{"stream_name":"stdout","time":688.529856726,"data":"cpu_openmp mnist_batch64: 2242.33 us wall\n"}
+,{"stream_name":"stdout","time":688.731917507,"data":"cpu_openmp mnist_batch64: 2242.33 us wall\n"}
+,{"stream_name":"stdout","time":689.799797929,"data":"cpu_openmp synthetic_larger: 24882.84 us wall\n"}
+,{"stream_name":"stdout","time":690.002571712,"data":"cpu_openmp synthetic_larger: 24882.84 us wall\n"}
+,{"stream_name":"stdout","time":690.825221161,"data":"cudnn mnist_single: 140.33 us wall\n"}
+,{"stream_name":"stdout","time":691.027235405,"data":"cudnn mnist_single: 140.33 us wall\n"}
+,{"stream_name":"stdout","time":691.084015222,"data":"cudnn mnist_batch64: 162.42 us wall\n"}
+,{"stream_name":"stdout","time":691.28633746,"data":"cudnn mnist_batch64: 162.42 us wall\n"}
+,{"stream_name":"stdout","time":691.293453468,"data":"cudnn synthetic_larger: 279.16 us wall\n"}
+,{"stream_name":"stdout","time":691.495879435,"data":"cudnn synthetic_larger: 279.16 us wall\n"}
+,{"stream_name":"stdout","time":691.588701525,"data":"pytorch_cpu mnist_single: 22.65 us wall\n"}
+,{"stream_name":"stdout","time":691.636450901,"data":"pytorch_cpu mnist_batch64: 367.62 us wall\n"}
+,{"stream_name":"stdout","time":691.677216636,"data":"pytorch_cpu synthetic_larger: 715.68 us wall\n"}
+,{"stream_name":"stdout","time":691.792027334,"data":"pytorch_cpu mnist_single: 22.65 us wall\n"}
+,{"stream_name":"stdout","time":691.792077515,"data":"pytorch_cpu mnist_batch64: 367.62 us wall\n"}
+,{"stream_name":"stdout","time":691.792082146,"data":"pytorch_cpu synthetic_larger: 715.68 us wall\n"}
+,{"stream_name":"stderr","time":692.835128371,"data":"/usr/local/lib/python3.13/dist-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.\n"}
+,{"stream_name":"stderr","time":692.83518058,"data":"  _warn_once(\n"}
+,{"stream_name":"stdout","time":692.957408719,"data":"pytorch_cuda mnist_single: 43.05 us wall\n"}
+,{"stream_name":"stderr","time":693.038211771,"data":"/usr/local/lib/python3.13/dist-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.\n"}
+,{"stream_name":"stderr","time":693.038254489,"data":"  _warn_once(\n"}
+,{"stream_name":"stderr","time":693.038259792,"data":"\n"}
+,{"stream_name":"stderr","time":693.038263912,"data":"/usr/local/lib/python3.13/dist-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.\n"}
+,{"stream_name":"stderr","time":693.038271929,"data":"  _warn_once(\n"}
+,{"stream_name":"stdout","time":693.164948998,"data":"pytorch_cuda mnist_single: 43.05 us wall\n"}
+,{"stream_name":"stdout","time":693.182028321,"data":"pytorch_cuda mnist_batch64: 75.35 us wall\n"}
+,{"stream_name":"stdout","time":693.384399076,"data":"pytorch_cuda mnist_batch64: 75.35 us wall\n"}
+,{"stream_name":"stdout","time":693.411341108,"data":"pytorch_cuda synthetic_larger: 154.29 us wall\n"}
+,{"stream_name":"stdout","time":693.613582801,"data":"pytorch_cuda synthetic_larger: 154.29 us wall\n"}
+,{"stream_name":"stdout","time":694.243099273,"data":"cudnn_dataparallel mnist_single: 632.60 us wall\n"}
+,{"stream_name":"stdout","time":694.448691758,"data":"cudnn_dataparallel mnist_single: 632.60 us wall\n"}
+,{"stream_name":"stdout","time":695.491339784,"data":"cudnn_dataparallel mnist_batch64: 1771.76 us wall\n"}
+,{"stream_name":"stdout","time":695.693403592,"data":"cudnn_dataparallel mnist_batch64: 1771.76 us wall\n"}
+,{"stream_name":"stdout","time":695.93855789,"data":"cudnn_dataparallel synthetic_larger: 1820.39 us wall\n"}
+,{"stream_name":"stdout","time":696.141133473,"data":"cudnn_dataparallel synthetic_larger: 1820.39 us wall\n"}
+,{"stream_name":"stdout","time":697.226672175,"data":"pytorch_dataparallel mnist_single: 529.62 us wall\n"}
+,{"stream_name":"stdout","time":697.430849453,"data":"pytorch_dataparallel mnist_single: 529.62 us wall\n"}
+,{"stream_name":"stdout","time":698.573635121,"data":"pytorch_dataparallel mnist_batch64: 2554.28 us wall\n"}
+,{"stream_name":"stdout","time":698.776152071,"data":"pytorch_dataparallel mnist_batch64: 2554.28 us wall\n"}
+,{"stream_name":"stdout","time":699.16100135,"data":"pytorch_dataparallel synthetic_larger: 2675.71 us wall\n"}
+,{"stream_name":"stdout","time":699.363562473,"data":"pytorch_dataparallel synthetic_larger: 2675.71 us wall\n"}
+,{"stream_name":"stdout","time":702.645717297,"data":"Report saved: /kaggle/working/cnn-cuda-case-study-full-mnist-results/REPORT.md\n"}
+,{"stream_name":"stdout","time":702.84818669,"data":"Report saved: /kaggle/working/cnn-cuda-case-study-full-mnist-results/REPORT.md\n"}
+,{"stream_name":"stdout","time":703.391918626,"data":"{\n"}
+,{"stream_name":"stdout","time":703.391947969,"data":"  \"passed\": true,\n"}
+,{"stream_name":"stdout","time":703.391952499,"data":"  \"dataset_scope\": \"full\",\n"}
+,{"stream_name":"stdout","time":703.391955907,"data":"  \"identical_initial_weight_bytes\": true,\n"}
+,{"stream_name":"stdout","time":703.391959459,"data":"  \"identical_disjoint_splits\": true,\n"}
+,{"stream_name":"stdout","time":703.391962664,"data":"  \"full_official_dataset_coverage\": true,\n"}
+,{"stream_name":"stdout","time":703.391966732,"data":"  \"epochs_every_backend\": 50,\n"}
+,{"stream_name":"stdout","time":703.391970432,"data":"  \"git_commit\": \"42624fca4ba9b278076097e076363057b2d32a27\",\n"}
+,{"stream_name":"stdout","time":703.391974467,"data":"  \"source_sha256\": \"a58ae19c93ef14abf8722034c45f4edd63913cd9720e07af6c463923b9929414\",\n"}
+,{"stream_name":"stdout","time":703.391978201,"data":"  \"pytorch_cudnn_dispatch_observed\": true,\n"}
+,{"stream_name":"stdout","time":703.391982114,"data":"  \"validation_checks\": 119,\n"}
+,{"stream_name":"stdout","time":703.391985412,"data":"  \"training\": [\n"}
+,{"stream_name":"stdout","time":703.39198859,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.391991925,"data":"      \"backend\": \"pytorch_cpu\",\n"}
+,{"stream_name":"stdout","time":703.391995512,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.391999121,"data":"      \"correct_test_predictions\": 9713,\n"}
+,{"stream_name":"stdout","time":703.39200307,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.392006281,"data":"      \"test_accuracy\": 0.9713,\n"}
+,{"stream_name":"stdout","time":703.392009657,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.392013499,"data":"      \"final_training_loss\": 0.03579502360026042\n"}
+,{"stream_name":"stdout","time":703.392017529,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.392021003,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.392024664,"data":"      \"backend\": \"cudnn\",\n"}
+,{"stream_name":"stdout","time":703.392028345,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.392031902,"data":"      \"correct_test_predictions\": 9717,\n"}
+,{"stream_name":"stdout","time":703.392035255,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.39204904,"data":"      \"test_accuracy\": 0.9717,\n"}
+,{"stream_name":"stdout","time":703.392053219,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.392057154,"data":"      \"final_training_loss\": 0.0355313720703125\n"}
+,{"stream_name":"stdout","time":703.392061159,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.392064965,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.392068759,"data":"      \"backend\": \"cudnn_dataparallel\",\n"}
+,{"stream_name":"stdout","time":703.392072692,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.392076198,"data":"      \"correct_test_predictions\": 9717,\n"}
+,{"stream_name":"stdout","time":703.392080043,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.392083863,"data":"      \"test_accuracy\": 0.9717,\n"}
+,{"stream_name":"stdout","time":703.392087095,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.392090712,"data":"      \"final_training_loss\": 0.03573208109537761\n"}
+,{"stream_name":"stdout","time":703.39209422,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.392097105,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.392100104,"data":"      \"backend\": \"pytorch_cuda\",\n"}
+,{"stream_name":"stdout","time":703.392103742,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.392107707,"data":"      \"correct_test_predictions\": 9717,\n"}
+,{"stream_name":"stdout","time":703.392111545,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.392114843,"data":"      \"test_accuracy\": 0.9717,\n"}
+,{"stream_name":"stdout","time":703.392118002,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.392121562,"data":"      \"final_training_loss\": 0.035514447530110675\n"}
+,{"stream_name":"stdout","time":703.392124715,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.392127711,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.392130731,"data":"      \"backend\": \"pytorch_dataparallel\",\n"}
+,{"stream_name":"stdout","time":703.392134114,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.392137149,"data":"      \"correct_test_predictions\": 9715,\n"}
+,{"stream_name":"stdout","time":703.392140869,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.39214485,"data":"      \"test_accuracy\": 0.9715,\n"}
+,{"stream_name":"stdout","time":703.392148289,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.392151451,"data":"      \"final_training_loss\": 0.0353287353515625\n"}
+,{"stream_name":"stdout","time":703.392154917,"data":"    }\n"}
+,{"stream_name":"stdout","time":703.392159702,"data":"  ]\n"}
+,{"stream_name":"stdout","time":703.392163186,"data":"}\n"}
+,{"stream_name":"stdout","time":703.418916763,"data":"{\n"}
+,{"stream_name":"stdout","time":703.41895925,"data":"  \"passed\": true,\n"}
+,{"stream_name":"stdout","time":703.418977148,"data":"  \"dataset_scope\": \"full\",\n"}
+,{"stream_name":"stdout","time":703.418982458,"data":"  \"identical_initial_weight_bytes\": true,\n"}
+,{"stream_name":"stdout","time":703.418987037,"data":"  \"identical_disjoint_splits\": true,\n"}
+,{"stream_name":"stdout","time":703.418991672,"data":"  \"full_official_dataset_coverage\": true,\n"}
+,{"stream_name":"stdout","time":703.418998267,"data":"  \"epochs_every_backend\": 50,\n"}
+,{"stream_name":"stdout","time":703.419023207,"data":"  \"git_commit\": \"42624fca4ba9b278076097e076363057b2d32a27\",\n"}
+,{"stream_name":"stdout","time":703.419042087,"data":"  \"source_sha256\": \"a58ae19c93ef14abf8722034c45f4edd63913cd9720e07af6c463923b9929414\",\n"}
+,{"stream_name":"stdout","time":703.419048399,"data":"  \"pytorch_cudnn_dispatch_observed\": true,\n"}
+,{"stream_name":"stdout","time":703.419053777,"data":"  \"validation_checks\": 119,\n"}
+,{"stream_name":"stdout","time":703.419058967,"data":"  \"training\": [\n"}
+,{"stream_name":"stdout","time":703.419064159,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.419068383,"data":"      \"backend\": \"pytorch_cpu\",\n"}
+,{"stream_name":"stdout","time":703.419072807,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.419076876,"data":"      \"correct_test_predictions\": 9713,\n"}
+,{"stream_name":"stdout","time":703.419081031,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.419085858,"data":"      \"test_accuracy\": 0.9713,\n"}
+,{"stream_name":"stdout","time":703.419091533,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.419096337,"data":"      \"final_training_loss\": 0.03579502360026042\n"}
+,{"stream_name":"stdout","time":703.419101,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.419104947,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.419108975,"data":"      \"backend\": \"cudnn\",\n"}
+,{"stream_name":"stdout","time":703.419113188,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.419118303,"data":"      \"correct_test_predictions\": 9717,\n"}
+,{"stream_name":"stdout","time":703.419124119,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.419129802,"data":"      \"test_accuracy\": 0.9717,\n"}
+,{"stream_name":"stdout","time":703.419135119,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.419140408,"data":"      \"final_training_loss\": 0.0355313720703125\n"}
+,{"stream_name":"stdout","time":703.419145357,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.419150368,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.41915437,"data":"      \"backend\": \"cudnn_dataparallel\",\n"}
+,{"stream_name":"stdout","time":703.419159004,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.419164219,"data":"      \"correct_test_predictions\": 9717,\n"}
+,{"stream_name":"stdout","time":703.419169515,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.419174749,"data":"      \"test_accuracy\": 0.9717,\n"}
+,{"stream_name":"stdout","time":703.419180894,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.419186367,"data":"      \"final_training_loss\": 0.03573208109537761\n"}
+,{"stream_name":"stdout","time":703.419191013,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.41919539,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.419199784,"data":"      \"backend\": \"pytorch_cuda\",\n"}
+,{"stream_name":"stdout","time":703.419205134,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.419210174,"data":"      \"correct_test_predictions\": 9717,\n"}
+,{"stream_name":"stdout","time":703.419215618,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.419220979,"data":"      \"test_accuracy\": 0.9717,\n"}
+,{"stream_name":"stdout","time":703.419226271,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.419230745,"data":"      \"final_training_loss\": 0.035514447530110675\n"}
+,{"stream_name":"stdout","time":703.419235202,"data":"    },\n"}
+,{"stream_name":"stdout","time":703.419259143,"data":"    {\n"}
+,{"stream_name":"stdout","time":703.419264423,"data":"      \"backend\": \"pytorch_dataparallel\",\n"}
+,{"stream_name":"stdout","time":703.41926969,"data":"      \"epochs\": 50,\n"}
+,{"stream_name":"stdout","time":703.41927471,"data":"      \"correct_test_predictions\": 9715,\n"}
+,{"stream_name":"stdout","time":703.419279763,"data":"      \"test_count\": 10000,\n"}
+,{"stream_name":"stdout","time":703.419284949,"data":"      \"test_accuracy\": 0.9715,\n"}
+,{"stream_name":"stdout","time":703.419290028,"data":"      \"initial_training_loss\": 0.2691007080078125,\n"}
+,{"stream_name":"stdout","time":703.419295157,"data":"      \"final_training_loss\": 0.0353287353515625\n"}
+,{"stream_name":"stdout","time":703.419299985,"data":"    }\n"}
+,{"stream_name":"stdout","time":703.419304403,"data":"  ]\n"}
+,{"stream_name":"stdout","time":703.419308716,"data":"}\n"}
+,{"stream_name":"stdout","time":705.649286877,"data":"Inside a CNN: same held-out digits, different convolution engines\n"}
+,{"stream_name":"stdout","time":705.649581854,"data":"Truth: [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]\n"}
+,{"stream_name":"stdout","time":705.65967049,"data":"pytorch_cpu    predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.13%  train 94.59s\n"}
+,{"stream_name":"stdout","time":705.852161861,"data":"Inside a CNN: same held-out digits, different convolution engines\n"}
+,{"stream_name":"stdout","time":705.852200484,"data":"Truth: [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]\n"}
+,{"stream_name":"stdout","time":705.852205083,"data":"pytorch_cpu    predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.13%  train 94.59s\n"}
+,{"stream_name":"stdout","time":706.057661565,"data":"cudnn          predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.17%  train 62.49s\n"}
+,{"stream_name":"stdout","time":706.260383333,"data":"cudnn          predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.17%  train 62.49s\n"}
+,{"stream_name":"stdout","time":706.872058767,"data":"cudnn_dataparallel predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.17%  train 165.78s\n"}
+,{"stream_name":"stdout","time":706.951007584,"data":"pytorch_cuda   predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.17%  train 50.80s\n"}
+,{"stream_name":"stdout","time":706.966978903,"data":"pytorch_dataparallel predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.15%  train 181.97s\n"}
+,{"stream_name":"stdout","time":706.967000231,"data":"\n"}
+,{"stream_name":"stdout","time":706.967004408,"data":"For the presentation, use benchmarks.json timings after warmup.\n"}
+,{"stream_name":"stdout","time":706.967008246,"data":"This demo includes checkpoint loading and setup, so its wall time is not a benchmark.\n"}
+,{"stream_name":"stdout","time":707.074814657,"data":"cudnn_dataparallel predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.17%  train 165.78s\n"}
+,{"stream_name":"stdout","time":707.074858285,"data":"pytorch_cuda   predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.17%  train 50.80s\n"}
+,{"stream_name":"stdout","time":707.074876523,"data":"pytorch_dataparallel predictions [7, 4, 3, 1, 7, 5, 8, 2, 7, 3]  test 97.15%  train 181.97s\n"}
+,{"stream_name":"stdout","time":707.074880825,"data":"\n"}
+,{"stream_name":"stdout","time":707.074884797,"data":"For the presentation, use benchmarks.json timings after warmup.\n"}
+,{"stream_name":"stdout","time":707.074889114,"data":"This demo includes checkpoint loading and setup, so its wall time is not a benchmark.\n"}
+,{"stream_name":"stdout","time":708.14709262,"data":"Saved result archive: /kaggle/working/cnn-cuda-case-study-full-mnist-results.zip\n"}
+,{"stream_name":"stderr","time":711.035919667,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":711.035979003,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":711.199108452,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":711.199129738,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":711.926381549,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":712.017515556,"data":"[NbConvertApp] Writing 398598 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":714.445568312,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":714.980653106,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":714.980691331,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":714.981128586,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":714.98148835,"data":"[NbConvertApp] Writing 321637 bytes to __results__.html\n"}
+]

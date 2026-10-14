@@ -15,6 +15,7 @@ def main():
     parser.add_argument('--record',required=True)
     parser.add_argument('--launch-dir')
     parser.add_argument('--destination')
+    parser.add_argument('--file-pattern',help='Download only files matching this regular expression.')
     args=parser.parse_args()
     record=Path(args.record)
     api=KaggleApi()
@@ -63,7 +64,7 @@ def main():
             count=0
             while True:
                 files,token=api.kernels_output(result['kernel'],str(destination),force=True,
-                    quiet=True,page_token=token,page_size=100)
+                    quiet=True,page_token=token,page_size=100,file_pattern=args.file_pattern)
                 count+=len(files)
                 if not token:
                     break

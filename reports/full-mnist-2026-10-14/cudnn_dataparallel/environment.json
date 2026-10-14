@@ -1,0 +1,45 @@
+{
+  "utc_time": "2026-10-14T14:42:41.132703+00:00",
+  "python": "3.13.15",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "torch": "2.11.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn_version": 91900,
+  "source_sha256": "a58ae19c93ef14abf8722034c45f4edd63913cd9720e07af6c463923b9929414",
+  "git_commit": "42624fca4ba9b278076097e076363057b2d32a27",
+  "cpu_logical_count": 4,
+  "torch_cpu_threads": 4,
+  "source_dirty": false,
+  "cpu_name": "Intel(R) Xeon(R) CPU @ 2.00GHz",
+  "gpu": {
+    "name": "Tesla T4",
+    "compute_capability": [
+      7,
+      5
+    ],
+    "multiprocessors": 40,
+    "total_memory_bytes": 15636037632
+  },
+  "gpus": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "compute_capability": [
+        7,
+        5
+      ],
+      "total_memory_bytes": 15636037632
+    },
+    {
+      "index": 1,
+      "name": "Tesla T4",
+      "compute_capability": [
+        7,
+        5
+      ],
+      "total_memory_bytes": 15636037632
+    }
+  ],
+  "cuda_compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0",
+  "cpu_compiler": null
+}

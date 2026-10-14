@@ -1,176 +1,123 @@
 # CNN CUDA Case Study
 
-**Inside a CNN: 2D convolution on CPU, one GPU and two GPUs.**
+**Inside a CNN: parallel 2D convolution on CPU, one GPU and two GPUs.**
 
-A small MNIST classifier with handwritten CPU/CUDA convolution, direct cuDNN calls and PyTorch baselines. The code is modular, the notebook fetches it from GitHub, and the results come from a completed Kaggle run.
+A 6,810-parameter MNIST classifier with C++/OpenMP operation benchmarks, direct cuDNN calls and PyTorch baselines. The full-dataset Kaggle experiment completed **50 epochs in all five configurations**. Source code lives in reusable modules; the notebook fetches the exact GitHub commit and retains checkpoints, predictions and metrics.
 
-[Presentation](presentation/CNN_CUDA_Case_Study.pptx) · [Experiment notebook](notebooks/experiment.ipynb) · [Kaggle run](https://www.kaggle.com/code/satyapaladugu/cnn-cuda-case-study) · [Full report](reports/kaggle-2026-10-14/REPORT.md) · [Raw metrics](reports/kaggle-2026-10-14/all_results.json) · [Release artifacts](https://github.com/saltypal/CNN-CUDA-Case-Study/releases/tag/v1.0.0)
+[Presentation](presentation/CNN_CUDA_Case_Study.pptx) · [Full-MNIST notebook](notebooks/experiment_full_mnist.ipynb) · [Kaggle run](https://www.kaggle.com/code/satyapaladugu/cnn-cuda-case-study-full-mnist) · [Measured report](reports/full-mnist-2026-10-14/REPORT.md) · [Raw metrics](reports/full-mnist-2026-10-14/all_results.json) · [Result archive](https://github.com/saltypal/CNN-CUDA-Case-Study/releases/tag/v2.0.0)
 
-## Full MNIST experiment
+## Full MNIST results
 
-[Full-dataset notebook](notebooks/experiment_full_mnist.ipynb) uses all 70,000 official MNIST images: 48,000 for training, 12,000 for validation and 10,000 for test. The development split preserves digit proportions and covers all 60,000 official training images without dropping minority classes.
+All five final models were evaluated on **10,000 official test images**. Final test accuracy is **97.13–97.17%** across the five models. **PyTorch, 1 GPU** had the lowest 50-epoch training time at **50.80 s**. The results below are newly measured on the full dataset.
 
-The prescribed setup stays the same: 50 epochs, global batch 64, seed 42, FP32, four 3x3 filters, SGD learning rate 0.05 and momentum 0.9. Five implementations compare PyTorch CPU, direct cuDNN on one/two GPUs and PyTorch GPU on one/two GPUs. Handwritten CUDA configurations are excluded. Every path starts from identical weights. [config_full_mnist.json](config_full_mnist.json) records this configuration. Full-dataset artifacts use a separate run directory so the original 10% study remains available.
+| Implementation | Convolution (µs) | 50-epoch training (s) | Digit inference (µs) | Batch-64 inference (img/s) | Test accuracy |
+|---|---:|---:|---:|---:|---:|
+| PyTorch CPU | 22.65 | 94.59 | 88.96 | 60,449 | 97.13% |
+| Direct cuDNN, 1 GPU | 140.33 | 62.49 | 452.48 | 139,617 | 97.17% |
+| Direct cuDNN, 2 GPUs | 632.60 | 165.78 | 961.70 | 28,295 | 97.17% |
+| PyTorch, 1 GPU | 43.05 | 50.80 | 347.21 | 180,668 | 97.17% |
+| PyTorch DataParallel, 2 GPUs | 529.62 | 181.97 | 851.90 | 21,055 | 97.15% |
 
-```bash
-PYTHONPATH=src python -m hpc_cnn.run --config config_full_mnist.json --run-root results/full-mnist
-python scripts/audit_results.py --run-root results/full-mnist
-PYTHONPATH=src python -m hpc_cnn.demo --config config_full_mnist.json --run-root results/full-mnist
-```
+Convolution measures one digit, four 3×3 filters and output allocation. Digit inference measures the complete CNN forward pass. Both are warmed median completed-call wall latencies with input resident on the device. Batch throughput uses a batch of 64. Training time sums synchronized epoch intervals and excludes validation, initial transfer, warmup and checkpoint I/O.
 
-## What the original 10% experiment found
+![Full-MNIST measured performance](reports/full-mnist-2026-10-14/performance.png)
 
-**All seven paths completed 50 epochs and classified 956 of 1,000 held-out digits correctly: 95.6% test accuracy.** One-GPU training was faster than CPU training. Two-GPU DataParallel was slower than its matching one-GPU implementation for this small CNN.
-
-| Implementation | One convolution (us) | 50-epoch training (s) | Single-image inference (us) | Test accuracy |
-|---|---:|---:|---:|---:|
-| PyTorch CPU | 23.80 | 10.17 | 83.45 | 95.6% |
-| Custom CUDA, 1 GPU | 62.41 | 6.06 | 351.39 | 95.6% |
-| Custom CUDA, 2 GPUs | 548.40 | 15.99 | 913.92 | 95.6% |
-| Direct cuDNN, 1 GPU | 141.80 | 6.34 | 444.74 | 95.6% |
-| Direct cuDNN, 2 GPUs | 633.95 | 17.32 | 959.52 | 95.6% |
-| PyTorch, 1 GPU | 41.68 | 5.42 | 379.61 | 95.6% |
-| PyTorch DataParallel, 2 GPUs | 524.17 | 18.39 | 867.08 | 95.6% |
-
-Convolution and inference columns report warmed median **completed-call wall latency**, with input already on the execution device. One convolution processes a 1x1x28x28 input using four 3x3 filters. Training sums synchronized training epochs and excludes validation, initial transfer, warmup and checkpoint I/O. These other costs remain in the detailed results.
-
-A batch of one activates one DataParallel replica, even when two GPUs are configured. Its larger latency still includes DataParallel wrapping, replication and dispatch overhead. Batch-64 tests use both GPUs.
-
-![Measured convolution, training and inference performance](reports/kaggle-2026-10-14/performance.png)
-
-PyTorch CPU had the lowest single-image inference latency in this run. PyTorch on one T4 had the lowest training time, 5.42 s, versus 10.17 s on CPU. This reflects different latency and throughput workloads. It does not establish that a GPU is faster for every request.
+PyTorch CPU had the lowest single-digit inference latency. PyTorch, 1 GPU had the highest batch-64 inference throughput. The best choice depends on the amount of work in each request. This is one seed and one runtime, so small timing differences do not establish a universal ranking.
 
 ## One GPU versus two GPUs
 
-| Matching engine | Training speedup | Efficiency on two GPUs | GPU-time cost ratio |
+| Matching engine | Training speedup | Efficiency on 2 GPUs | GPU-time cost ratio |
 |---|---:|---:|---:|
-| Custom CUDA | 0.379x | 18.96% | 5.27x |
-| Direct cuDNN | 0.366x | 18.30% | 5.47x |
-| PyTorch | 0.295x | 14.74% | 6.78x |
+| Direct cuDNN | 0.377× | 18.85% | 5.31× |
+| PyTorch | 0.279× | 13.96% | 7.16× |
 
-The global batch remains 64 for both runs, so each two-GPU replica receives 32 examples. Speedup is `T_one / T_two`. Efficiency is `T_one / (2*T_two)`. GPU-time cost ratio is `2*T_two / T_one`, a device-time proxy rather than a currency charge or a claim about Kaggle quota accounting.
+The global batch stays at 64, giving each two-GPU replica 32 examples. Speedup is `T1/T2`, efficiency is `T1/(2*T2)`, and GPU-time cost ratio is `2*T2/T1`. A speedup below one means the second GPU increased training time. GPU-time is a resource proxy; energy, monetary charges and Kaggle quota use were not measured.
 
-The model is small enough that DataParallel replication, worker dispatch, scatter/gather and gradient reduction outweigh the extra compute capacity. This is a measured negative result for this workload. A larger model or batch may behave differently.
+DataParallel adds model replication, host dispatch, scatter/gather and gradient reduction. Those costs must be compared with the compute time saved. No profiler attribution was collected to assign exact percentages to individual overhead components.
 
-## Model and dataset
+## Prescribed model and setup
 
 | Stage | Per-image shape |
 |---|---|
-| Grayscale input | 1 x 28 x 28 |
-| Four 3x3 filters, stride 1, valid padding | 4 x 26 x 26 |
-| ReLU | 4 x 26 x 26 |
-| 2x2 max pool | 4 x 13 x 13 |
-| Flatten | 676 |
-| Linear classifier | 10 logits |
+| Grayscale input | 1 × 28 × 28 |
+| Four 3×3 filters, stride 1, valid padding | 4 × 26 × 26 |
+| ReLU and 2×2 max pooling | 4 × 13 × 13 |
+| Flatten and linear classifier | 676 → 10 logits |
 
-The network has **6,810 parameters**. Its convolution performs 24,336 MACs per digit, or 48,672 FLOPs excluding bias addition. CNN convolution uses cross-correlation: the filter scans the image without reversing its spatial weights.
+The CNN has **6,810 parameters**. Its convolution performs 24,336 MACs per digit. The convolution computes cross-correlation, with no spatial reversal of the filter.
 
-Exactly 10% of MNIST is used: **4,800 training, 1,200 validation and 1,000 test images**. The first two splits use 6,000 examples from the 60,000-image training collection. The test subset uses 1,000 examples from the separate 10,000-image test collection. Every split contains equal numbers of each digit, and the exact indices are saved. Pixels use `x/255`.
+Full [MNIST](https://yann.lecun.com/) provides 60,000 development images and 10,000 test images. The development collection is split into **48,000 training and 12,000 validation images**, preserving the previous 80/20 ratio. Proportional stratification retains every image and preserves each digit's frequency. All **10,000 official test images** remain separate. Exact indices are saved and audited.
 
-All training paths use FP32, seed 42, batch size 64, SGD learning rate 0.05, momentum 0.9, identical initial weights and identical epoch shuffle orders. TF32 is disabled. Test accuracy refers to the final epoch-50 checkpoint. Validation-selected checkpoints are saved separately.
+Every configuration uses **50 epochs, batch 64, seed 42, FP32, SGD learning rate 0.05 and momentum 0.9**. TF32 is disabled. Initial parameter bytes, data splits and epoch shuffle orders are identical. Each configuration performs 37,500 optimizer steps. Final test results use epoch-50 checkpoints; validation-selected checkpoints are retained separately.
 
-![Training loss and validation accuracy](reports/kaggle-2026-10-14/learning_curves.png)
+![Full-MNIST learning curves](reports/full-mnist-2026-10-14/learning_curves.png)
 
-Training loss falls close to zero while validation accuracy stays around 94–95%. The 50-epoch requirement completes, but the curves show overfitting on this small subset. These results are useful for a computing case study, not evidence of optimal classifier training.
-
-## What is handwritten
+## Implementation boundary
 
 | Component | Implementation |
 |---|---|
-| CPU convolution | C++ loops, serial and OpenMP |
-| CUDA convolution | Direct kernel and shared-memory tiled kernel |
-| Convolution gradients | Handwritten CPU/CUDA input, filter and bias gradients |
-| Direct cuDNN path | C API calls through ctypes, cached descriptors/workspaces |
-| Remaining CNN operations | PyTorch ReLU, max pool, linear layer, cross entropy and SGD |
-| Two-GPU execution | PyTorch DataParallel around each chosen engine |
+| Native CPU convolution | C++ loops, serial and four OpenMP workers |
+| GPU convolution | cuDNN CUDA library kernels |
+| Convolution gradients | cuDNN backward primitives with PyTorch autograd integration |
+| Direct cuDNN | C API calls with fixed convolution algorithms |
+| Other CNN operations | PyTorch ReLU, pooling, linear layer, loss and SGD |
+| Two-GPU execution | PyTorch DataParallel around the selected convolution engine |
 
-This controlled boundary isolates convolution. It is a hybrid classifier, not an entirely handwritten neural-network runtime. PyTorch GPU convolution also used cuDNN in the observed dispatch trace. Direct cuDNN and PyTorch therefore compare API/framework paths and algorithm choices on the same hardware. The direct path uses fixed legacy algorithms for a clear operation boundary.
+Five training paths compare PyTorch CPU, direct cuDNN on one/two GPUs, and PyTorch GPU on one/two GPUs. Handwritten CUDA configurations are excluded. The comparison changes convolution while retaining one classifier and training loop. PyTorch GPU also dispatched cuDNN in the observed trace, so the direct cuDNN/PyTorch comparison includes API overhead and algorithm choices on the same hardware. Tensor Core usage was not verified.
 
 ## Run and reproduce
 
-Import [the notebook](notebooks/experiment.ipynb) into Kaggle, select **GPU T4 x2**, enable Internet and run all cells. Its first cell resets only a dedicated temporary source checkout, clones GitHub and checks out `SOURCE_REF`. Set that value to the measured source commit:
+Import [the full-MNIST notebook](notebooks/experiment_full_mnist.ipynb) into Kaggle, select **GPU T4 x2**, enable Internet and run all cells. To reproduce these results, set:
 
 ```python
-SOURCE_REF = "370e8a418f76c32129057a95eb7993f19095cd3f"
+SOURCE_REF = "42624fca4ba9b278076097e076363057b2d32a27"
 ```
 
-The completed run used **two Tesla T4 GPUs**, an Intel Xeon CPU with four logical processors, Python 3.13.15, PyTorch 2.11.0+cu128, CUDA runtime 12.8, cuDNN 9.19.0 and nvcc 12.8.93. See the saved environment JSON for full provenance. The environment shown here is the measured environment, not a promise that Kaggle retains those versions forever.
+The first setup cell removes only a dedicated temporary source checkout, clones GitHub and checks out the requested commit. Results use the separate `/kaggle/working/cnn-cuda-case-study-full-mnist-results` directory. Save a notebook version with outputs to retain them after the runtime ends. The release archive provides an additional persistent copy.
 
-Results live outside the resettable source copy under `/kaggle/working/cnn-cuda-case-study-results`. Save a notebook version with outputs to retain checkpoints, metrics, plots and logs after the runtime ends. The completed result archive is also attached to the GitHub release.
+The measured runtime used Python 3.13.15, PyTorch 2.11.0+cu128, CUDA runtime 12.8 and cuDNN 91900. Saved environment JSON records the CPU, both GPUs, compilers, source hash and package versions. Future Kaggle runtimes may differ.
 
-Equivalent commands in a compatible Linux/WSL environment with two GPUs:
+In a compatible Linux/WSL environment:
 
 ```bash
 git clone https://github.com/saltypal/CNN-CUDA-Case-Study.git
 cd CNN-CUDA-Case-Study
+git checkout 42624fca4ba9b278076097e076363057b2d32a27
 export PYTHONPATH="$PWD/src"
-python -m hpc_cnn.run --run-root "$PWD/results/main"
+python -m hpc_cnn.run --config config_full_mnist.json --run-root results/full-mnist
+python scripts/audit_results.py --run-root results/full-mnist --source-ref 42624fca4ba9b278076097e076363057b2d32a27
+python -m hpc_cnn.demo --config config_full_mnist.json --run-root results/full-mnist
 ```
 
-To reuse matching completed runs:
+The native CPU operation benchmark needs a Linux C++ compiler with OpenMP. The GPU CNN paths need a compatible PyTorch/cuDNN runtime. Two-GPU configurations require two CUDA GPUs. CUDA kernels do not execute on TPU hardware.
 
-```bash
-python -m hpc_cnn.run --run-root "$PWD/results/main" --skip-completed
-```
+## Saved evidence and limits
 
-The runtime needs PyTorch, NumPy, Matplotlib, a Linux C++ compiler with OpenMP, nvcc and cuDNN. CUDA kernels compile for the detected device architecture. The local Pascal requirements are for the MX330 preparation environment, not the Kaggle T4 runtime. A single-GPU machine cannot run the two-GPU configuration.
+**119 numerical correctness checks passed.** Forward results and all convolution gradients match the framework reference within tolerance, including non-square inputs and multiple channels. A hand-computed example, a finite-difference derivative and DataParallel checks provide additional evidence.
 
-## Measurements, overhead and cost
+The [independent audit](reports/full-mnist-2026-10-14/audit.json) verifies full dataset coverage, disjoint splits, identical initial parameter bytes and split indices, 50 epoch records for every backend, timing sums, all 10,000 test predictions per backend and the source commit. Separately trained models can diverge slightly because floating-point reduction order changes their training trajectories.
 
-The experiment retains one-image and batch-64 convolution tests, full-CNN inference, a larger synthetic convolution, setup/transfer time, host enqueue time, CUDA-event intervals, empty-kernel latency and a DataParallel identity diagnostic. All timing samples follow warmup and include p10/p90 spread.
+The operation benchmarks also retain serial/OpenMP CPU comparisons, H2D/D2H transfer times and host enqueue time and a DataParallel identity diagnostic. The identity diagnostic is not an exact subtraction of CNN communication overhead. GPU-event intervals can include submission gaps.
 
-The identity diagnostic exercises scatter, worker dispatch and gather without model parameters. Its output shape differs from CNN logits, so it is a diagnostic rather than an exact subtraction of CNN communication cost. Instrumented wall minus event interval also includes event management and synchronization. GPU events can include host submission gaps and are not pure kernel-body timings.
+Peak RSS includes framework resources. GPU memory reports sum per-device tensor allocation peaks, which may occur at different times and exclude driver/context allocation. Energy and currency cost remain unavailable. Fixed 50-epoch timing is different from time to a target accuracy.
 
-Calculated MACs, FLOPs and logical tensor bytes describe computation/storage cost. Measured process RSS includes the framework and libraries. GPU memory reports sum per-device tensor allocation peaks, which may occur at different times and exclude driver/context allocation. **Energy was not measured**, and no monetary rate was provided. The report keeps these fields unavailable instead of deriving them from speed.
+## Presentation and demo
 
-## Validation and saved evidence
+The 12-slide presentation follows the supplied reference style:
 
-**170 correctness checks passed.** Forward outputs and all convolution gradients match a framework reference within tolerance. Tests cover multiple channels, batches, non-square inputs and partial CUDA tiles. A hand-computed example and a finite-difference derivative add independent checks. The two-GPU paths also check scatter/gather and gradient reduction.
+- **Prithiv**, slides 2–4: CNN, sequential versus parallel work, CPU/OpenMP execution.
+- **Satya**, slides 5–8: GPGPU, CUDA execution, kernels and program design, DataParallel.
+- **Roydon**, slides 9–12: measured results, scaling and cost, accuracy, conclusions and demo.
 
-The result audit verified identical initial parameter bytes, identical disjoint splits, exactly 50 epoch records per run, summed timing consistency and all 1,000 predictions per backend. Every final model has exactly 956 correct test predictions. Slight FP32 gradient/reduction differences remain visible in the training histories.
-
-- [Detailed report](reports/kaggle-2026-10-14/REPORT.md)
-- [Comparison CSV](reports/kaggle-2026-10-14/comparison.csv)
-- [Complete metrics JSON](reports/kaggle-2026-10-14/all_results.json)
-- [Validation results](reports/kaggle-2026-10-14/validation.json)
-- [Independent result audit](reports/kaggle-2026-10-14/audit.json)
-- [Checkpoints, PowerPoint and complete run archive](https://github.com/saltypal/CNN-CUDA-Case-Study/releases/tag/v1.0.0)
-
-## Source map
-
-| Module | Responsibility |
-|---|---|
-| `data.py` | IDX download, checksums and saved balanced splits |
-| `native/conv_cpu.cpp` | Serial/OpenMP forward and backward convolution |
-| `native/conv_cuda.cu` | Direct/tiled kernels and gradient reductions |
-| `backends.py` | Tensor addresses, current streams and direct cuDNN calls |
-| `model.py` | Shared classifier and DataParallel wrapping |
-| `validate.py` | Numerical and one/two-GPU correctness gates |
-| `train.py` | Controlled training, timing and checkpoints |
-| `benchmark.py` | Repeated latency, overhead and scaling tests |
-| `run.py` | Sequential independent backend processes |
-| `report.py` | Comparison tables and plots |
-| `demo.py` | Final checkpoints on the same held-out digits |
-
-The modules live in `src/hpc_cnn`. [DESIGN.md](DESIGN.md) records their contracts and acceptance gates.
-
-## Presentation demo
-
-The Kaggle run successfully executed the demo after training. In the same two-GPU runtime:
+The demo loads all five final checkpoints and predicts the same held-out digits. Cold loading is separate from warmed inference latency. In the completed Kaggle runtime:
 
 ```bash
 cd /kaggle/working/cnn-cuda-case-study-source
-PYTHONPATH=src python -m hpc_cnn.demo --run-root /kaggle/working/cnn-cuda-case-study-results
+PYTHONPATH=src python -m hpc_cnn.demo --config /kaggle/working/cnn-cuda-case-study-full-mnist-results/run_config_full_mnist.json --run-root /kaggle/working/cnn-cuda-case-study-full-mnist-results
 ```
 
-Checkpoint loading and cold initialization are separate from warmed benchmark latency. Use the measured tables when discussing performance. The 12-slide presentation follows the supplied dark, diagram-led reference and keeps the three-presenter sequence:
+## Source map and original study
 
-- Prithiv, slides 2–4: CNN basics, sequential versus parallel work, CPU execution with OpenMP and its advantages/disadvantages.
-- Satya, slides 5–8: GPGPU, CUDA execution, kernels and shared program design, two-GPU DataParallel.
-- Roydon, slides 9–12: measured results, efficiency/overhead/cost, conclusion and the live checkpoint demo.
+Core modules are in `src/hpc_cnn`: `data.py` prepares splits, `native/conv_cpu.cpp` implements the CPU operation benchmark, `backends.py` binds native/cuDNN operations, `model.py` creates the shared classifier, `train.py` trains it, `benchmark.py` measures operations, `report.py` writes results, and `demo.py` reuses saved checkpoints. `scripts/audit_results.py` independently audits the completed run. [DESIGN.md](DESIGN.md) describes the module contracts.
 
-The explanations use illustrations and short text. All seven measured configurations remain in the result tables, and the speaker notes contain the demo command and timing definitions. Earlier deck versions remain in their respective releases.
-
-## Limits
-
-One seed, one runtime and a balanced 10% subset. Repeated latency samples do not replace independent training trials. Timing includes Python/framework overhead and can vary with runtime contention. The sequential backend order can also affect measured timings. No universal CUDA speedup, optimized training recipe or energy-efficiency claim follows from this experiment.
+The original **10% MNIST experiment** remains archived in [reports/kaggle-2026-10-14](reports/kaggle-2026-10-14/REPORT.md), with its [notebook](notebooks/experiment.ipynb) and [v1.0.0 artifacts](https://github.com/saltypal/CNN-CUDA-Case-Study/releases/tag/v1.0.0). Those measurements describe a smaller workload and a separate runtime.
