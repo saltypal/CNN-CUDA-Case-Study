@@ -31,7 +31,7 @@ def main():
                 text=''.join(cell['source']).replace('SOURCE_REF = "main"',f'SOURCE_REF = "{commit}"')
                 cell['source']=text.splitlines(True)
         (folder/'experiment_full_mnist.ipynb').write_text(json.dumps(notebook,indent=2),encoding='utf-8')
-        metadata={'id':'satyapaladugu/cnn-cuda-full-mnist-20261014',
+        metadata={'id':'satyapaladugu/cnn-cuda-case-study-full-mnist',
             'title':'CNN CUDA Case Study Full MNIST','code_file':'experiment_full_mnist.ipynb',
             'language':'python','kernel_type':'notebook','is_private':True,
             'enable_gpu':True,'enable_internet':True,'dataset_sources':[],

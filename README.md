@@ -10,7 +10,7 @@ A small MNIST classifier with handwritten CPU/CUDA convolution, direct cuDNN cal
 
 [Full-dataset notebook](notebooks/experiment_full_mnist.ipynb) uses all 70,000 official MNIST images: 48,000 for training, 12,000 for validation and 10,000 for test. The development split preserves digit proportions and covers all 60,000 official training images without dropping minority classes.
 
-The prescribed setup stays the same: 50 epochs, global batch 64, seed 42, FP32, four 3x3 filters, SGD learning rate 0.05 and momentum 0.9. All seven CPU, one-GPU and two-GPU implementations start from identical weights. [config_full_mnist.json](config_full_mnist.json) records this configuration. Full-dataset artifacts use a separate run directory so the original 10% study remains available.
+The prescribed setup stays the same: 50 epochs, global batch 64, seed 42, FP32, four 3x3 filters, SGD learning rate 0.05 and momentum 0.9. Five implementations compare PyTorch CPU, direct cuDNN on one/two GPUs and PyTorch GPU on one/two GPUs. Handwritten CUDA configurations are excluded. Every path starts from identical weights. [config_full_mnist.json](config_full_mnist.json) records this configuration. Full-dataset artifacts use a separate run directory so the original 10% study remains available.
 
 ```bash
 PYTHONPATH=src python -m hpc_cnn.run --config config_full_mnist.json --run-root results/full-mnist
