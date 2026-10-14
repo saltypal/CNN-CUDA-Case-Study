@@ -48,6 +48,12 @@ def create_report(run_root):
     hardware=benchmark['environment']
     config=benchmark['config']
     full_dataset=config.get('dataset_scope','subset')=='full'
+    handwritten_cuda=any(backend.startswith('cuda') for backend in backends)
+    implementation_description=(
+        'Custom CPU and CUDA implement convolution forward, input gradient, weight gradient and bias gradient. The direct cuDNN backend invokes the cuDNN C API through ctypes. PyTorch supplies tensor storage, the remaining CNN layers, loss and SGD for all paths. Thus custom CUDA training is a hybrid CNN with a custom convolution, rather than a fully handwritten neural-network runtime.'
+        if handwritten_cuda else
+        'The five CNN training configurations use PyTorch CPU, direct cuDNN on one/two GPUs and PyTorch GPU on one/two GPUs. GPU work uses library CUDA kernels; no handwritten CUDA convolution configuration is included. Native serial/OpenMP CPU convolution remains an additional operation benchmark. PyTorch supplies tensor storage, remaining layers, loss and SGD.'
+    )
     dataset_description=(
         f"Full MNIST: {config['train_count']:,} training and {config['validation_count']:,} validation images cover the entire official training collection. All {config['test_count']:,} official test images remain separate. Development splits preserve digit proportions. Input values use x/255."
         if full_dataset else
@@ -66,7 +72,7 @@ def create_report(run_root):
         dataset_description,
         'Every trained backend starts with the same weights, shuffled indices, SGD learning rate 0.05, momentum 0.9, global batch size 64, seed 42 and 50 epochs. Two-GPU DataParallel assigns 32 examples to each GPU. Batch 1 uses only one GPU.',
         '', '## Implementation boundary','',
-        'Custom CPU and CUDA implement convolution forward, input gradient, weight gradient and bias gradient. The direct cuDNN backend invokes the cuDNN C API through ctypes. PyTorch supplies tensor storage, the remaining CNN layers, loss and SGD for all paths. Thus custom CUDA training is a hybrid CNN with a custom convolution, rather than a fully handwritten neural-network runtime.',
+        implementation_description,
         'The PyTorch CUDA baseline may use cuDNN internally. It tests framework dispatch and algorithm choice, rather than an independent hardware platform. CPU custom convolution uses one worker or four OpenMP workers. Shared classifier operations use four PyTorch CPU threads.',
         '', '## Measured comparison','',
         '| Backend | One conv wall us | Batch 64 conv wall us | 50-epoch train s | Test accuracy | Single CNN inference us |',
@@ -91,13 +97,13 @@ def create_report(run_root):
     text+=['','Each GPU pair compares the same convolution implementation and global batch size. DataParallel replicates the model, scatters inputs, gathers outputs and reduces gradients. One image uses only one replica. Efficiency is T_one/(2*T_two) for the two identical GPUs. GPU-time cost ratio is 2*T_two/T_one and counts allocated GPU time, not measured energy.']
     text+=['',
         'CPU efficiency T1/(p*Tp) compares the same native convolution at one versus p OpenMP workers. GPU throughput is reported in images/s and calculated GFLOP/s. CUDA cores and CPU cores are heterogeneous, so dividing CPU-to-GPU speedup by a GPU core count does not produce a defensible parallel efficiency.',
-        'Aggregate host overhead is paired instrumented wall time minus the CUDA-event interval. It includes Python/C ABI calls, event management and synchronization. Separate empty-kernel and pageable H2D/D2H copy timings make overhead visible. These overhead measurements are diagnostic, and the event interval can include host submission gaps.',
+        'Aggregate host overhead is paired instrumented wall time minus the CUDA-event interval. It includes Python/C ABI calls, event management and synchronization. Pageable H2D/D2H copy timings make data-movement overhead visible. These measurements are diagnostic, and the event interval can include host submission gaps.',
         'Computational cost is calculated MACs/FLOPs and logical tensor bytes. Memory cost is measured peak process RSS and the sum of per-device peak PyTorch GPU tensor allocation. Those peaks need not occur simultaneously. RSS includes the framework and context and is measured in a fresh backend process. GPU allocated bytes exclude driver/context memory and are not total board VRAM usage.',
         'Energy was not measured. Monetary cost remains unspecified because no rental or electricity rate was provided. A configured per-GPU-hour rate can calculate a time-based charge without claiming that it measures electricity consumption or actual Kaggle quota accounting.',
         '', '## Validation and limits','',
         f"{len(validation['checks'])} correctness checks passed. Forward and all convolution gradients match the PyTorch CPU reference within the declared tolerance. Checks cover multiple channels, batches, non-square inputs, partial CUDA tiles, a hand-computed case and an independent central-difference derivative.",
         scope_description+' Timing samples are not independent repeated training trials. Runtime contention and host/framework overhead can affect rankings.',
-        'Training all paths for the same epoch count measures fixed-workload time. It does not establish equal time to a target accuracy. A slow custom CUDA result is valid evidence and must remain visible.',
+        'Training all paths for the same epoch count measures fixed-workload time. It does not establish equal time to a target accuracy. Slower results remain visible in the measured comparison.',
         '', '## Sources','',
         '- [PyTorch Conv2d](https://docs.pytorch.org/docs/2.9/generated/torch.nn.Conv2d.html)',
         '- [CUDA programming model](https://docs.nvidia.com/cuda/cuda-programming-guide/01-introduction/programming-model.html)',
